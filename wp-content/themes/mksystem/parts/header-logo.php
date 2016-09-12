@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="header_logo">
+<div class="header_logo text-center">
 	<?php if(get_theme_mod('Logo_mksystem','')!=''){ ?>
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_theme_mod('Logo_mksystem'); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
 	<?php } else { ?>

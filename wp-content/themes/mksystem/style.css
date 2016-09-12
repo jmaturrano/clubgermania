@@ -19,10 +19,56 @@ Aquí empieza la personalización del tema
 
 .header_logo img{
 max-width: 150px;
+
 }
-/*.row content_squeeze{
-}*/
+.header_logo  {
+    /*padding: 4px 0 0 71px;*/
+}
+
 body > .container .row.content_squeeze {
-    background: #509F9C ;
-   
+    background: #FFF;
+    
+}
+.col-sm-4 {
+    background: #5cb0d8 ;
+  
+}
+header #menu_row {
+    padding-left: 600px;
+}
+
+
+.nav > li > a:focus, .fallback_cb > ul > li > a, .fallback_cb > ul > li > a:hover {
+    color: #fff;
+    border-radius: 30
+}
+ 
+.static_banner 
+{
+   border: 16px solid #E3E8EE;   
+}
+
+.frontpage-action{
+display: none;
+}
+.frontpage-featured{
+display: none;
+}
+.frontpage-about{
+display: none;
+}
+.frontpage-action2{
+display: none;
+}
+.frontpage-team{
+display: none;
+}
+.frontpage-news{
+display: none;
+}
+.main_content {
+display: none;
+}
+.frontpage-contact{
+display: none;
 }

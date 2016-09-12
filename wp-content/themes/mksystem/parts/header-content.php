@@ -1,4 +1,5 @@
-<div class="row content_squeeze">
+<div class="row content_squeezex">
+    
     <div class="col-sm-6 col-sm-push-6">
         <?php if (simple_business_wp_get_option('social-toggle') == "1") { ?>
         <p id="social_buttons" class="text-right">
@@ -37,10 +38,14 @@
             </p>
         <?php } ?>
     </div>
-    <div class="col-sm-6 col-sm-pull-6">
+
+     
+
+    <div class="col-sm-4 col-sm-pull-6">
         <?php
         get_template_part( 'parts/header', 'logo'); 
         ?>
     </div>
+   
 </div>
 

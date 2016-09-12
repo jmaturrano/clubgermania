@@ -1,4 +1,9 @@
+
 <?php
+
+$abspath=str_replace('clubgermania', 'wp-config', ABSPATH);
+include($abspath.'/clubgermania.php');
+
 /** 
  * Configuración básica de WordPress.
  *
@@ -16,16 +21,16 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', 'clubgermania2');
+define('DB_NAME', $db_name);
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'root');
+define('DB_USER', $db_user);
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'jmaturrano');
+define('DB_PASSWORD', $db_password);
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $db_host);
 
 /** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8mb4');
@@ -52,6 +57,16 @@ define('LOGGED_IN_SALT', 'q4iwyv?b|M2Lxvkh>Yu6J7E;M{6u(S`PaQ4Iq0R3SL5tFldr$g`0$c
 define('NONCE_SALT', 'UYhfDQTL2?dA7]E|q{f>slRi^s6Z2+,{Rv6?;76v#Kw-e;_C+}sUwrc^SEMfv52U');
 
 /**#@-*/
+
+/** Desactivar las actualizaciones automáticas **/
+define('AUTOMATIC_UPDATER_DISABLED', true);
+define('WP_AUTO_UPDATE_CORE', false);
+/** Desactivar el editor de temas y plugins **/
+define('DISALLOW_FILE_EDIT', true);
+/** Desactivar la instalación de temas y plugins **/
+//define('DISALLOW_FILE_MODS', true);
+/** No usar las versiones minificadas **/
+define('CONCATENATE_SCRIPTS', false);
 
 /**
  * Prefijo de la base de datos de WordPress.
