@@ -1,4 +1,9 @@
+
 <?php
+
+$abspath=str_replace('clubgermania', 'wp-config', ABSPATH);
+include($abspath.'/clubgermania.php');
+
 /** 
  * Configuración básica de WordPress.
  *
@@ -16,6 +21,7 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
+<<<<<<< HEAD
 define('DB_NAME', 'wi030918_wpclubg');
 
 /** Tu nombre de usuario de MySQL */
@@ -23,9 +29,18 @@ define('DB_USER', 'wi030918');
 
 /** Tu contraseña de MySQL */
 define('DB_PASSWORD', 'nu74SUgiku');
+=======
+define('DB_NAME', $db_name);
+
+/** Tu nombre de usuario de MySQL */
+define('DB_USER', $db_user);
+
+/** Tu contraseña de MySQL */
+define('DB_PASSWORD', $db_password);
+>>>>>>> 80be9234214a640132a947d636cec0232a6445d0
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $db_host);
 
 /** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8mb4');
