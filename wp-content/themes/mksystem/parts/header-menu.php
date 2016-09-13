@@ -1,5 +1,5 @@
-<div class="row content_squeeze menu_sticky">
-    <nav id="menu_row" class="navbar navbar-default" role="navigation">
+<!-- <div class="row content_squeeze menu_sticky"> -->
+    <nav id="menu_row" class="navbar navbar-default text-center " role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -23,6 +23,7 @@
                 ));
             ?>
     </nav>
-</div>
+    
+<!-- </div> -->
 
   

@@ -14,7 +14,6 @@
             <header>
                 <?php 
                 get_template_part( 'parts/header', 'content'); 
-                get_template_part( 'parts/header', 'menu');
                 ?>
             </header>
             <div class="line"></div>

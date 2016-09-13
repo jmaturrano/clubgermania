@@ -1,8 +1,13 @@
-<div class="row content_squeezex">
-    
-    <div class="col-sm-6 col-sm-push-6">
+<div class="row row_mk content_squeezex">
+      <div class="col-md-4">
+        <?php
+        get_template_part( 'parts/header', 'logo'); 
+        ?>
+    </div>
+   
+    <div class="col-md-8">
         <?php if (simple_business_wp_get_option('social-toggle') == "1") { ?>
-        <p id="social_buttons" class="text-right">
+        <p id="social_buttons" class="text-right s1">
             <?php
             $social_type = array("fa-facebook" => "simple_business_wp_facebook_url", "fa-linkedin" => "simple_business_wp_linkedin_url", "fa-twitter" => "simple_business_wp_twitter_url", "fa-envelope" => "simple_business_wp_mail_url");
             foreach ($social_type as $key => $id) {
@@ -29,23 +34,26 @@
         <?php } else if (simple_business_wp_get_option('social-toggle') == "3") { ?>
 
         <?php } else { ?>
-            <p id="social_buttons" class="text-right">
+            <p class="text-right s1">
+                &nbsp;
+            </p>
+            <p  class="text-right s2">
                 <a href="#"><i class="fa fa-facebook fa-socialcircle"></i></a>
                 <a href="q"><i class="fa fa-linkedin fa-socialcircle"></i></a>
                 <a href="#"><i class="fa fa-twitter fa-socialcircle"></i></a>
                 <a href="mailto:#"><i class="fa fa-envelope fa-socialcircle"></i></a>
                 <a href="#"><i class="fa fa-rss fa-socialcircle"></i></a>
             </p>
+            <p  class="text-right s3">
+                &nbsp;
+            </p>
+            <?php 
+            get_template_part( 'parts/header', 'menu');
+            ?>          
         <?php } ?>
     </div>
 
-     
-
-    <div class="col-sm-4 col-sm-pull-6">
-        <?php
-        get_template_part( 'parts/header', 'logo'); 
-        ?>
-    </div>
+  
    
 </div>
 
