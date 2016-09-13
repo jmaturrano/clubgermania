@@ -16,13 +16,13 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', 'clubgermania2');
+define('DB_NAME', 'wi030918_wpclubg');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'root');
+define('DB_USER', 'wi030918');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'jmaturrano');
+define('DB_PASSWORD', 'nu74SUgiku');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'localhost');
@@ -52,6 +52,16 @@ define('LOGGED_IN_SALT', 'q4iwyv?b|M2Lxvkh>Yu6J7E;M{6u(S`PaQ4Iq0R3SL5tFldr$g`0$c
 define('NONCE_SALT', 'UYhfDQTL2?dA7]E|q{f>slRi^s6Z2+,{Rv6?;76v#Kw-e;_C+}sUwrc^SEMfv52U');
 
 /**#@-*/
+
+/** Desactivar las actualizaciones automáticas **/
+define('AUTOMATIC_UPDATER_DISABLED', true);
+define('WP_AUTO_UPDATE_CORE', false);
+/** Desactivar el editor de temas y plugins **/
+define('DISALLOW_FILE_EDIT', true);
+/** Desactivar la instalación de temas y plugins **/
+//define('DISALLOW_FILE_MODS', true);
+/** No usar las versiones minificadas **/
+define('CONCATENATE_SCRIPTS', false);
 
 /**
  * Prefijo de la base de datos de WordPress.
