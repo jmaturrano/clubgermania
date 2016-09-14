@@ -34,9 +34,12 @@
         <?php } else if (simple_business_wp_get_option('social-toggle') == "3") { ?>
 
         <?php } else { ?>
+        <div class="s1_1">
             <p class="text-right s1">
                 &nbsp;
             </p>
+        </div>
+        <div class="s1_2">
             <p  class="text-right s2">
                 <a href="#"><i class="fa fa-facebook fa-socialcircle"></i></a>
                 <a href="q"><i class="fa fa-linkedin fa-socialcircle"></i></a>
@@ -44,9 +47,12 @@
                 <a href="mailto:#"><i class="fa fa-envelope fa-socialcircle"></i></a>
                 <a href="#"><i class="fa fa-rss fa-socialcircle"></i></a>
             </p>
+        </div>
+        <div class="s1_3">
             <p  class="text-right s3">
                 &nbsp;
             </p>
+        </div>
             <?php 
             get_template_part( 'parts/header', 'menu');
             ?>          

@@ -22,11 +22,19 @@ Aquí empieza la personalización del tema
 HEADER
 */
 .header_logo img {
-	max-width: 230px;
+	left: 20%;	
+	max-width: 217px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 	
 }
 .logo {
-   background: #5cb0d8;
+   /*background: #5cb0d8;*/
+  
+    border-right: 60px solid transparent;
+    border-top: 183px solid #5cb0d8;
+
 }
 
 .text-right{
@@ -36,15 +44,36 @@ HEADER
 }
 
 .s1{
-	background: #5cb0d8;
+	/*background: #5cb0d8;*/
+	height: 0px;
+    border-left: 33px solid transparent;
+    border-bottom: 38px solid #5cb0d8;
 }
 
 .s2{
- 	background: #94c8e5;
+ 	/*background: #94c8e5;*/
+ 	height: 0px;
+    border-left: 33px solid transparent;
+    border-bottom: 38px solid #94c8e5;
 }
 
 .s3{
- 	background: #d7eaf5;
+ 	/*background: #d7eaf5;*/
+ 	height: 0px;
+    border-left: 33px solid transparent;
+    border-bottom: 38px solid #d7eaf5;
+}
+.s1_1{
+	/*background: #5cb0d8;*/
+	padding-left: 8.8%;
+}
+.s1_2{
+	/*background: #5cb0d8;*/
+	padding-left: 4.5%;
+}
+.s1_3{
+	/*background: #5cb0d8;*/
+	padding-left: 0%;
 }
 
 #menu-principal .menu-item >a{
@@ -126,7 +155,7 @@ CONTENT MIDDLE
 }
 .mksystem-icons{
 	background: #5cb0d8;
-	border-radius: 35px;
+	border-radius: 60px;
     opacity: 0.71;
     position: absolute;
     right: 78px;
