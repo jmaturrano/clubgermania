@@ -121,6 +121,7 @@ header icono
 	left: 77%;
 }
 
+
 .container{
 	border: 0 none!important;
 	margin-top: 0!important;
@@ -148,7 +149,9 @@ CONTENT MIDDLE
     z-index: 2;
 }
 .mksystem-icons ul{
-	padding: 12px 0;
+
+	padding: 2px 0;
+
 }
 .mksystem-icons li{
 	list-style: none;
@@ -162,6 +165,7 @@ CONTENT MIDDLE
 	font-size: 30px;
 	display: block;
 }
+
 .text-right.s2 img{
 	max-width: 29px;
 }
@@ -180,4 +184,13 @@ responsive
       left:14%;
       max-width: 199px;
   }
+.img-mksystem {
+	background-color: #5cb0d8;
+	border-radius: 0px;
+	padding: 6px 6px 30px;
+}
+.contenido-azul{
+	background-color:#d7eaf5;
+	padding: 35px; 
+}
 }
