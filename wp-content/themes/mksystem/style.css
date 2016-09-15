@@ -135,9 +135,10 @@ HEADER
 .frontpage-news{
 	display: none;
 }
-.main_content {
+/*.main_content {
 	display: none;
 }
+*/
 .frontpage-contact{
 	display: none;
 }
@@ -163,11 +164,8 @@ CONTENT MIDDLE
     z-index: 2;
 }
 .mksystem-icons ul{
-<<<<<<< HEAD
-	padding: 30px 0;
-=======
+
 	padding: 2px 0;
->>>>>>> 84dd9a4231114bd975da959b2aa600e89219ff27
 }
 .mksystem-icons li{
 	list-style: none;
@@ -179,4 +177,15 @@ CONTENT MIDDLE
 .mksystem-icons a span{
 	font-size: 30px;
 	display: block;
+}
+
+
+.img-mksystem {
+	background-color: #5cb0d8;
+	border-radius: 0px;
+	padding: 6px 6px 30px;
+}
+.contenido-azul{
+	background-color:#d7eaf5;
+	padding: 35px; 
 }

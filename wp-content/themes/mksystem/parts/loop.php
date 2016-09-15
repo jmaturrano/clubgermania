@@ -16,7 +16,7 @@ if (is_single()) {
         }
     } else {
             get_template_part( 'parts/error', 'no_results');
-    } 
+    }
 } else {
     get_template_part( 'parts/content', 'blog');
 }

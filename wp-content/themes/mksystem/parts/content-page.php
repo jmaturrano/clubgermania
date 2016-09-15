@@ -22,6 +22,7 @@ if (empty($sidebar_select) || ($sidebar_select == 'none')) {
             if (get_post_meta($post->ID, 'toggle_featured', true) == "show") {
                 get_template_part( 'parts/image', '1168_526');
             }
+
             the_content();
             simple_business_wp_clear();
             get_template_part( 'parts/wp_link_pages');
