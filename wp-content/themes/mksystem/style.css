@@ -46,30 +46,30 @@ HEADER
 .s1{
 	/*background: #5cb0d8;*/
 	height: 0px;
-    border-left: 33px solid transparent;
+    border-left: 16px solid transparent;
     border-bottom: 38px solid #5cb0d8;
 }
 
 .s2{
  	/*background: #94c8e5;*/
  	height: 0px;
-    border-left: 33px solid transparent;
+    border-left: 16px solid transparent;
     border-bottom: 38px solid #94c8e5;
 }
 
 .s3{
  	/*background: #d7eaf5;*/
  	height: 0px;
-    border-left: 33px solid transparent;
+    border-left: 16px solid transparent;
     border-bottom: 38px solid #d7eaf5;
 }
 .s1_1{
 	/*background: #5cb0d8;*/
-	padding-left: 8.8%;
+	padding-left: 4.4%;
 }
 .s1_2{
 	/*background: #5cb0d8;*/
-	padding-left: 4.5%;
+	padding-left: 2.3%;
 }
 .s1_3{
 	/*background: #5cb0d8;*/
@@ -163,14 +163,14 @@ CONTENT MIDDLE
     z-index: 2;
 }
 .mksystem-icons ul{
-	padding: 20px 0;
+	padding: 2px 0;
 }
 .mksystem-icons li{
 	list-style: none;
 }
 .mksystem-icons a{
 	color: #fff;
-	padding: 10px 30px;
+	padding: 0px 9px;
 }
 .mksystem-icons a span{
 	font-size: 30px;
