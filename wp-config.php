@@ -1,7 +1,7 @@
 
 <?php
 $abspath=str_replace('clubgermania', 'wp-config', ABSPATH);
-include($abspath.'/clubgermania.php'); 
+include($abspath.'/clubgermania.php');
 /** 
  * Configuración básica de WordPress.
  *
@@ -25,7 +25,7 @@ define('DB_NAME', $db_name);
 define('DB_USER', $db_user);
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', $db_password);
+define('DB_PASSWORD',$db_password);
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', $db_host);
