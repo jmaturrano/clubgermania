@@ -40,12 +40,11 @@
             </p>
         </div>
         <div class="s1_2">
-            <p  class="text-right s2">
-                <a href="#"><i class="fa fa-facebook fa-socialcircle"></i></a>
-                <a href="q"><i class="fa fa-linkedin fa-socialcircle"></i></a>
-                <a href="#"><i class="fa fa-twitter fa-socialcircle"></i></a>
-                <a href="mailto:#"><i class="fa fa-envelope fa-socialcircle"></i></a>
-                <a href="#"><i class="fa fa-rss fa-socialcircle"></i></a>
+            <p  class="text-right s2 icono">
+                <img src="<?php echo get_template_directory_child(); ?>/inc/img/bandera.jpg" />
+                <a target="_blank"href="http://facebook.com"><i class="icono glyphicon glyphicon-earphone"></i></a>
+                <a target="_blank"href="#"><i class="icono fa fa-facebook oficial"></i></a>
+                <a href="mailto:#"><i class="icono fa fa-envelope fa-social"></i></a>
             </p>
         </div>
         <div class="s1_3">

@@ -16,5 +16,5 @@
                 get_template_part( 'parts/header', 'content'); 
                 ?>
             </header>
-            <div class="line"></div>
+          
             

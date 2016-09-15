@@ -29,6 +29,14 @@ HEADER
     width: 100%;
 	
 }
+/*
+header icono
+*/
+.icono{
+	padding: 0 12px;
+	color:#FFF;
+}
+
 .logo {
    /*background: #5cb0d8;*/
   
@@ -46,37 +54,37 @@ HEADER
 .s1{
 	/*background: #5cb0d8;*/
 	height: 0px;
-    border-left: 16px solid transparent;
+    border-left: 12px solid transparent;
     border-bottom: 38px solid #5cb0d8;
 }
 
 .s2{
  	/*background: #94c8e5;*/
  	height: 0px;
-    border-left: 16px solid transparent;
+    border-left: 12px solid transparent;
     border-bottom: 38px solid #94c8e5;
 }
 
 .s3{
  	/*background: #d7eaf5;*/
  	height: 0px;
-    border-left: 16px solid transparent;
+    border-left: 12px solid transparent;
     border-bottom: 38px solid #d7eaf5;
 }
 .s1_1{
 	/*background: #5cb0d8;*/
-	padding-left: 4.4%;
+	padding-left: 3.4%;
 }
 .s1_2{
 	/*background: #5cb0d8;*/
-	padding-left: 2.3%;
+	padding-left: 1.8%;
 }
 .s1_3{
 	/*background: #5cb0d8;*/
 	padding-left: 0%;
 }
 
-#menu-principal .menu-item >a{
+#menu-principal >.menu-item >a{
 	background: #93c7e4;
 	font-size:14px;
 	color: #fff;
@@ -87,6 +95,7 @@ HEADER
 #menu-principal .menu-item >a:hover,
 .current-menu-item a{
 	background: #00a4d0 !important;
+	color: #fff;
 
 }
 
@@ -97,11 +106,6 @@ HEADER
 
 #menu_row { 
     padding-left: 0px;
-}
-
-.row_mk{
-    margin-left: -30px;
-    margin-right: -30px;
 }
 
 .nav > li > a:focus, .fallback_cb > ul > li > a, .fallback_cb > ul > li > a:hover {
@@ -117,30 +121,6 @@ HEADER
 	left: 77%;
 }
 
-.frontpage-action{
-	display: none;
-}
-.frontpage-featured{
-	display: none;
-}
-.frontpage-about{
-	display: none;
-}
-.frontpage-action2{
-	display: none;
-}
-.frontpage-team{
-	display: none;
-}
-.frontpage-news{
-	display: none;
-}
-.main_content {
-	display: none;
-}
-.frontpage-contact{
-	display: none;
-}
 .container{
 	border: 0 none!important;
 	margin-top: 0!important;
@@ -153,26 +133,51 @@ CONTENT MIDDLE
 .content-middle{
 	position: relative;
 }
+.static_banner, #slideshow {
+   
+    margin-left: 0px;
+    max-width: 100%;
+}
 .mksystem-icons{
 	background: #5cb0d8;
 	border-radius: 60px;
     opacity: 0.71;
     position: absolute;
-    right: 78px;
+    right: 103px;
     top: 11px;
     z-index: 2;
 }
 .mksystem-icons ul{
-	padding: 2px 0;
+	padding: 12px 0;
 }
 .mksystem-icons li{
 	list-style: none;
 }
 .mksystem-icons a{
 	color: #fff;
-	padding: 0px 9px;
+	padding: 9px;
+	display: inline-block;
 }
-.mksystem-icons a span{
+.mksystem-icons a span.glyphicon{
 	font-size: 30px;
 	display: block;
+}
+.text-right.s2 img{
+	max-width: 29px;
+}
+.mksystem-icons a span.tex-ico{
+	display: block;
+	font-size: 10px;
+	padding: 0px 10px;
+}
+
+
+/*
+responsive
+*/
+@media screen and (max-width: 1024px){
+  .header_logo img {
+      left:14%;
+      max-width: 199px;
+  }
 }
