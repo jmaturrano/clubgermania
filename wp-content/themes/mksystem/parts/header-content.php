@@ -1,11 +1,11 @@
 <div class="row row_mk content_squeezex">
-      <div class="col-md-4">
+      <div class="col-md-4" style="padding-right: 0%">
         <?php
         get_template_part( 'parts/header', 'logo'); 
         ?>
     </div>
    
-    <div class="col-md-8">
+    <div class="col-md-8" style="padding-left: 0%">
         <?php if (simple_business_wp_get_option('social-toggle') == "1") { ?>
         <p id="social_buttons" class="text-right s1">
             <?php

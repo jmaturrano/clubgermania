@@ -174,23 +174,25 @@ CONTENT MIDDLE
 	font-size: 10px;
 	padding: 0px 10px;
 }
-
-
-/*
-responsive
-*/
-@media screen and (max-width: 1024px){
-  .header_logo img {
-      left:14%;
-      max-width: 199px;
-  }
+.contenido-azul{
+	background-color:#d7eaf5;
+	padding: 35px; 
+}
 .img-mksystem {
 	background-color: #5cb0d8;
 	border-radius: 0px;
 	padding: 6px 6px 30px;
 }
-.contenido-azul{
-	background-color:#d7eaf5;
-	padding: 35px; 
+#copyright{
+	padding-top:18px; 
 }
+
+/*
+responsive
+*/
+@media screen and (max-width: 1024px){
+	.header_logo img {
+	  left:14%;
+	  max-width: 199px;
+	}
 }
