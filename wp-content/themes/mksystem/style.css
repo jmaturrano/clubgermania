@@ -23,7 +23,7 @@ HEADER
 */
 .header_logo img {
 	left: 20%;	
-	max-width: 217px;
+	max-width: 190px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -33,15 +33,16 @@ HEADER
 header icono
 */
 .icono{
-	padding: 0 12px;
+	padding: 0 6px;
 	color:#FFF;
+	font-size: 21px;
 }
 
 .logo {
    /*background: #5cb0d8;*/
   
     border-right: 60px solid transparent;
-    border-top: 183px solid #5cb0d8;
+    border-top: 170px solid #19a5c9;
 
 }
 
@@ -55,21 +56,21 @@ header icono
 	/*background: #5cb0d8;*/
 	height: 0px;
     border-left: 12px solid transparent;
-    border-bottom: 38px solid #5cb0d8;
+    border-bottom: 38px solid #19a5c9;
 }
 
 .s2{
  	/*background: #94c8e5;*/
  	height: 0px;
     border-left: 12px solid transparent;
-    border-bottom: 38px solid #94c8e5;
+    border-bottom: 38px solid #76c0d9;
 }
 
 .s3{
  	/*background: #d7eaf5;*/
  	height: 0px;
     border-left: 12px solid transparent;
-    border-bottom: 38px solid #d7eaf5;
+    border-bottom: 38px solid #cee6f0;
 }
 .s1_1{
 	/*background: #5cb0d8;*/
@@ -98,6 +99,9 @@ header icono
 	color: #fff;
 
 }
+#menu_row .navbar-collapse .navbar-nav > li {
+    padding: 0 0 9px!important;
+}
 
 .container .row.content_squeeze {
     background: #FFF;
@@ -106,6 +110,15 @@ header icono
 
 #menu_row { 
     padding-left: 0px;
+}
+
+#menu_row .dropdown-menu {
+    background-color: #68b8dd;
+    border: 0px;
+}
+#menu_row .dropdown-menu {
+    background-color: #68b8dd;
+    border: 0px;
 }
 
 .nav > li > a:focus, .fallback_cb > ul > li > a, .fallback_cb > ul > li > a:hover {
@@ -142,10 +155,10 @@ CONTENT MIDDLE
 .mksystem-icons{
 	background: #5cb0d8;
 	border-radius: 60px;
-    opacity: 0.71;
+    opacity: 0.61;
     position: absolute;
-    right: 103px;
-    top: 11px;
+    right: 137px;
+    top: 27px;
     z-index: 2;
 }
 .mksystem-icons ul{
@@ -158,25 +171,34 @@ CONTENT MIDDLE
 }
 .mksystem-icons a{
 	color: #fff;
-	padding: 9px;
+	padding: 4px;
 	display: inline-block;
 }
 .mksystem-icons a span.glyphicon{
-	font-size: 30px;
+	font-size: 21px;
 	display: block;
+	color: #FFF;
 }
 
 .text-right.s2 img{
 	max-width: 29px;
+	padding: 0 0 5px;
 }
 .mksystem-icons a span.tex-ico{
 	display: block;
 	font-size: 10px;
-	padding: 0px 10px;
+	padding: 0px 7px;
 }
 .contenido-azul{
 	background-color:#d7eaf5;
 	padding: 35px; 
+}
+.carousel-indicators .active {
+    background-color: #5ab2d8;
+    border: 1px solid #5ab2d8;
+}
+.carousel-indicators li {
+    background-color: #FFF;
 }
 .img-mksystem {
 	background-color: #5cb0d8;
@@ -186,6 +208,18 @@ CONTENT MIDDLE
 #copyright{
 	padding-top:18px; 
 }
+.navbar-default .navbar-nav > li li a,
+header .fallback_cb > ul > li > ul li a,
+header .fallback_cb > ul > li > ul li a:hover{
+	color: #FFF;
+	border-bottom: 1px solid #fff;
+}
+.carousel-control .fa{
+	font-size: 100px;
+	left: 40%;
+    top: 37%;
+}
+
 
 /*
 responsive
