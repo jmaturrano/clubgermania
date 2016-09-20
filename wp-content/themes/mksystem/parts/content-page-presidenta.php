@@ -4,7 +4,7 @@
 
 <div <?php post_class('main_content content row content_squeeze'); ?>>
     <div class="contenido-azul">
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12 ">
        
 
             <?php 

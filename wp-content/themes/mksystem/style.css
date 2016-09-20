@@ -219,8 +219,36 @@ header .fallback_cb > ul > li > ul li a:hover{
 	left: 40%;
     top: 37%;
 }
+/*pagina contenido*/
+.mk-historia img{
 
+	max-width: 15%!important;
+	background-color: #5cb0d8;
+    border-radius: 0;
+    padding: 7px;
+}
+.mk-historia-1{
+    padding: 6px 6px 30px;
+}
+.mk-historia-2{
+    padding: 6px 6px 30px;
+}
+.mk-historia-contenido {
+    padding: 0 10px 4px 45px;
+}
+.mksystem-historiac{
+	left: 8%;
+}
+.mk-servicios{
 
+	left: 17%
+}
+.row.content_squeeze.main_content,
+body > .container .row.content_squeeze_more.main_content {
+	padding-top: 0px!important;
+	}
+
+/*
 /*
 responsive
 */
