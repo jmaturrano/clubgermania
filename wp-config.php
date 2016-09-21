@@ -1,6 +1,6 @@
 
 <?php
-$abspath=str_replace('clubgermania', 'wp-config', ABSPATH);
+$abspath = str_replace('clubgermania', 'wp-config', ABSPATH);
 include($abspath.'/clubgermania.php');
 /** 
  * Configuración básica de WordPress.
