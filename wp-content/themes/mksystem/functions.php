@@ -92,15 +92,15 @@ function mksystem_customizer_register( $wp_customize ) {
 
 
 }
-
 add_action('customize_register','mksystem_customizer_register');
+
+
 
 /**
  * Mk system header styles
  *
  */
 function mksystem_header_styles() {
-
   //FOnt awesome
   wp_enqueue_style( 'Font-awesome', get_template_directory_child() . '/plugin/font-awesome-4.6.3/css/font-awesome.css' );
  
@@ -115,3 +115,17 @@ add_action( 'wp_enqueue_scripts', 'mksystem_header_styles' );
 
 
 
+
+
+/**
+ * Mk system header scripts
+ *
+ */
+function mksystem_header_scripts() {
+?>
+  <script>
+    jQuery('.carousel').carousel();
+  </script>
+<?php
+}
+add_action('wp_footer','mksystem_header_scripts', 100);

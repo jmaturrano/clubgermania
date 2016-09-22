@@ -10,11 +10,10 @@
         ?>        
     </head>
     <body <?php body_class(); ?> id="<?php if (simple_business_wp_get_option('home-slug')=='') {echo "home";} else {echo esc_attr(simple_business_wp_get_option('home-slug'));} ?>">
-        <div class="container">
-            <header>
-                <?php 
-                get_template_part( 'parts/header', 'content'); 
-                ?>
-            </header>
+        <header>
+            <?php 
+            get_template_part( 'parts/header', 'content20160921'); 
+            ?>
+        </header>
           
             

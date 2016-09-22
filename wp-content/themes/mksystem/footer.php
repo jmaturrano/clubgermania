@@ -31,9 +31,8 @@
                 <div class="col-md-5">
                     <p id="copyright"><?php if (simple_business_wp_get_option('copyright') != '') { echo esc_html(simple_business_wp_get_option('copyright')); } else { echo "&copy ". esc_html(get_bloginfo( 'name' )) . " " . date('Y'); } ?> - Desarrolado por Mksystem</p>
                 </div>
-              
-            </div>
-        </div>
+            </div><!--.row-->
+        </div><!--.container-->
 <?php wp_footer(); ?>
 </body>
 </html>

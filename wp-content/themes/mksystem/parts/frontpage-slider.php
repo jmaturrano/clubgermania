@@ -9,18 +9,20 @@
                             <span class="tex-ico">UBICANOS</span>
                         </a>
                     </li>
-                    <li><a href="#">
+                    <li>
+                        <a href="#">
                             <span class=" glyphicon glyphicon-user"></span>
                             <span class="tex-ico">SOCIOS</span>
-                    </a>
+                        </a>
                     </li>
-                    <li><a href="#">
+                    <li>
+                        <a href="#">
                             <span class=" glyphicon glyphicon-search"></span>
-                             <span class="tex-ico">BUSCAR</span>
-                    </a>
+                            <span class="tex-ico">BUSCAR</span>
+                        </a>
                     </li>
-                    </ul>
-            </div>
+                </ul>
+            </div><!--.mksystem-icons-->
             <div data-interval="5000" data-ride="carousel" class="carousel slide" id="slideshow">
 
                 <!-- Indicators -->
@@ -89,9 +91,9 @@
                     <span class="fa fa-angle-right glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
-        </div>    
-    </div>
-</div>
+            </div><!--.carousel.slide-->
+        </div><!--.col-md-12-->
+    </div><!--row-->
+</div><!--content-middle-->
 
 

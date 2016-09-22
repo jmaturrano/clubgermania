@@ -129,10 +129,6 @@ header icono
 .static_banner {
    	border: 16px solid #E3E8EE;   
 }
-.carousel-indicators {
-	padding-left: 338px;
-	left: 77%;
-}
 
 
 .container{
@@ -240,15 +236,118 @@ header .fallback_cb > ul > li > ul li a:hover{
 	left: 8%;
 }
 .mk-servicios{
-
 	left: 17%
 }
 .row.content_squeeze.main_content,
 body > .container .row.content_squeeze_more.main_content {
 	padding-top: 0px!important;
-	}
+}
+
+
+
 
 /*
+*
+*
+* STYLES VERSION 2.0 (JMATURRANO)
+*
+*
+*/
+.header-line-1{
+	background: #19A5C9;
+}
+.header-line p{
+	margin: 0;
+	padding: 5px 0;
+}
+.header-line-2{
+	background: #76C0D9;
+}
+.header-line-3{
+	background: #CEE6F0;
+}
+.header-line-4{
+	background: #fff;
+}
+.main-header{
+	position: relative;
+}
+.main-header .logo-shop{
+	background: #19a5c9;
+	position: absolute;
+	width: 45%;
+}
+.logo-shop img{
+	max-width: 224px;
+}
+header .main-header #menu_row{
+	padding: 20px 0;
+}
+#slideshow  {
+	width:100%;
+}
+.carousel-indicators{
+	left: auto;
+	margin: 0;
+	padding: 0 20px 0 0;
+	position: relative;
+	text-align: right;
+	width: 100%;
+}
+.carousel-fade .carousel-inner .item {
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+.item:nth-child(1) {
+    background: #74C390;
+}
+.item:nth-child(2) {
+    background: #51BCE8;
+}
+.item:nth-child(3) {
+    background: #E46653;
+}
+.carousel-indicators-block{
+	bottom: 15px;
+	position: absolute;
+	right: 200px;
+}
+a.bandera img{
+	margin: 4px 3px 0 0;
+	max-width: 28px;
+	vertical-align: top;
+}
+
+/*
+* STYLES VERSION 2.0 (JMATURRANO) - END
+*/
+
+
+
+
 /*
 responsive
 */

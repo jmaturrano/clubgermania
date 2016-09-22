@@ -416,11 +416,11 @@ add_action('wp_enqueue_scripts', 'simple_business_wp_public_scripts');
 function simple_business_wp_public_scripts() {
     if (!is_admin()) {
         wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '3.0.0');
-        wp_enqueue_script('waypoints',get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js','','3.1.1',true);
+        //wp_enqueue_script('waypoints',get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js','','3.1.1',true);
         wp_enqueue_script('scrollreveal',get_template_directory_uri() . '/assets/js/scrollReveal.min.js','','2.3.2',true);
         wp_enqueue_script('easing',get_template_directory_uri() . '/assets/js/jquery.easing.min.js','','1.3',true);
-        wp_enqueue_script('waypoints-sticky',get_template_directory_uri() . '/assets/js/sticky.min.js','','3.1.1',true);
-        wp_enqueue_script('simple_business_wp_public',get_template_directory_uri() . '/assets/js/public.js','','1.0.0',true);
+        //wp_enqueue_script('waypoints-sticky',get_template_directory_uri() . '/assets/js/sticky.min.js','','3.1.1',true);
+        //wp_enqueue_script('simple_business_wp_public',get_template_directory_uri() . '/assets/js/public.js','','1.0.0',true);
     }
 }
 
