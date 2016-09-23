@@ -1,8 +1,6 @@
-<?php
 
-?>
 <div <?php post_class('row'); ?>>
-	<div class="content-page-historia mksystem-content-bg">
+	<div class="content-page content-page-historia mksystem-content-bg">
 		<div class="content-page-marco">
 		<?php 
 			$query = new WP_Query( array( 'cat' => 'historia_club', 'posts_per_page' => -1) );
@@ -37,7 +35,7 @@
 				<?php the_content(); ?>
 			</div>
 		</div><!--.content-page-marco-->
-	</div><!--.content-page-historia-->
+	</div><!--.content-page-->
 </div><!--.row-->
     
  

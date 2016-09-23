@@ -8,11 +8,10 @@
  * @package Mksystem
  */
 
-
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
+		<div id="primary" class="content-area container">
 
 		<?php
 		// Start the loop.
@@ -26,8 +25,8 @@ get_header(); ?>
 	            get_template_part( 'parts/error', 'no_results');
 	    }
     	?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+   
+		</div><!-- .content-area -->
+	</main><!-- .site-main -->
 
 <?php get_footer(); ?>

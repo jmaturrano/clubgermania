@@ -410,25 +410,24 @@ header.border-header{
 #main{
 	padding-top: 193px;
 }
+.text-justify{
+	text-align: justify;
+}
 /*
 * STYLES VERSION 2.0 (JMATURRANO) - END
 */
 
 
-
 /*
-* PAGE HISTORIA
+* PAGE
 */
-.content-page-historia{
+.content-page{
 	padding: 50px;
 }
 .content-page-marco{
 	background: #d7eaf5;
 	border: 6px solid #f3f3f3;
 	padding: 20px;
-}
-.text-justify{
-	text-align: justify;
 }
 .mksystem-img-thumbnail{
 	display: block;
@@ -442,6 +441,14 @@ header.border-header{
 .mksystem-img-thumbnail .img-thumbnail:hover{
 	opacity: 0.7;
 }
+/*
+* PAGE - END
+*/
+
+/*
+* PAGE HISTORIA
+*/
+
 /*
 * PAGE HISTORIA - END
 */

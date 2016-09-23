@@ -38,7 +38,7 @@ if (empty($sidebar_select) || ($sidebar_select == 'none')) {
     </div><!--.row-->
 <?php 
 } else {
-    echo "hola 2";
+    exit();
 ?>
     <div <?php post_class('main_content content row content_squeeze'); ?>>
 
