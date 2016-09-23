@@ -413,6 +413,45 @@ header.border-header{
 .text-justify{
 	text-align: justify;
 }
+.unique-image{
+	padding: 35px;
+	position: relative;
+}
+.mksystem-triangulo{
+    border-bottom: 33px solid transparent;
+    border-left: 55px solid #19a5c9;
+    border-top: 33px solid transparent;
+    height: 0;
+    position: absolute;
+    right: -25px;
+    top: 35px;
+    width: 0;
+}
+.block-title-page{
+	background: #19a5c9;
+    margin-top: 20px;
+    max-height: 111px;
+    padding: 15px;
+    position: relative;
+    width: 300px;
+}
+.block-title-page h2, 
+.block-title-page h3{
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+}
+.border-title-page {
+	border-bottom: 111px solid #19a5c9;
+    border-right: 55px solid transparent;
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    right: -55px;
+    top: 0;
+}
 /*
 * STYLES VERSION 2.0 (JMATURRANO) - END
 */
@@ -437,6 +476,9 @@ header.border-header{
 	background-color: #19a5c9;
     border: 1px solid #19a5c9;
     border-radius: 0;
+}
+.mksystem-img-thumbnail .img-thumbnail.img-responsive{
+    padding-bottom: 35px;
 }
 .mksystem-img-thumbnail .img-thumbnail:hover{
 	opacity: 0.7;
