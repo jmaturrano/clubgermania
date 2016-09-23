@@ -106,8 +106,15 @@ function mksystem_header_styles() {
  
 ?>
   <style type="text/css">
-    
-    
+    .mksystem-content-bg{
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-color: rgba(255, 255, 255, 0.5);
+        background-image: url(<?= get_template_directory_child().'/inc/img/bg-decoration_1900x900.png'; ?>);
+        background-origin: padding-box;
+        background-position: center center;
+        background-repeat: repeat-y;
+    }
   </style>
 <?php
 }
@@ -125,6 +132,15 @@ function mksystem_header_scripts() {
 ?>
   <script>
     jQuery('.carousel').carousel();
+    jQuery(document).ready(function(){
+      jQuery(document).scroll(function(e) {
+          if(jQuery(this).scrollTop() > jQuery('header').height()) {
+              jQuery('header').addClass('border-header');
+          } else {
+              jQuery('header').removeClass('border-header');
+          }
+      });
+    });
   </script>
 <?php
 }

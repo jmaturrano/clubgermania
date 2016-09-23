@@ -395,6 +395,21 @@ a.bandera img{
 .mksystem-icons:hover{
 	opacity: 0.75;
 }
+.single_post_nav a, 
+.taxonomies_tags a{
+	font-weight: 600;
+}
+header{
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+header.border-header{
+	border-bottom: 1px solid #cee6f0;
+}
+#main{
+	padding-top: 193px;
+}
 /*
 * STYLES VERSION 2.0 (JMATURRANO) - END
 */
@@ -423,6 +438,9 @@ a.bandera img{
 	background-color: #19a5c9;
     border: 1px solid #19a5c9;
     border-radius: 0;
+}
+.mksystem-img-thumbnail .img-thumbnail:hover{
+	opacity: 0.7;
 }
 /*
 * PAGE HISTORIA - END

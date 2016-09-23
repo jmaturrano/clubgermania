@@ -1,7 +1,7 @@
-<div class="content-middle">
+<div class="content-middle" id="main">
     <div class=""><!--.container-->
         <div class=""><!--.row-->
-            <div class=""><!--.col-md-12-->
+            <div class="" style="position: relative;"><!--.col-md-12-->
 
                 <div class="mksystem-icons text-center">
                     <ul>
