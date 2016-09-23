@@ -1,7 +1,7 @@
 <div class="content-middle">
-    <div class="container"><!--.container-->
-        <div class="row"><!--.row-->
-            <div class="col-md-12"><!--.col-md-12-->
+    <div class=""><!--.container-->
+        <div class=""><!--.row-->
+            <div class=""><!--.col-md-12-->
 
                 <div class="mksystem-icons text-center">
                     <ul>
@@ -29,8 +29,8 @@
 
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
-                            <!-- <div class="container"> -->
-                                <!-- <div class="row"> -->
+                            <div class="container">
+                                <div class="row">
                                     <ol class="carousel-indicators text-right">
                                         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
                                         <?php if(get_theme_mod('slider_mksystem_2','')!=''){ ?>
@@ -49,8 +49,8 @@
                                             <li data-target="#slideshow" data-slide-to="5"></li>
                                         <?php } ?>
                                     </ol>
-                                <!-- </div> -->
-                            <!-- </div> -->
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Wrapper for slides -->

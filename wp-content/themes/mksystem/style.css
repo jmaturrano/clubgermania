@@ -94,10 +94,10 @@ header icono
 }
 
 #menu-principal .menu-item >a:hover,
-.current-menu-item a{
+.current-menu-item a, 
+#menu-principal > .menu-item.current-menu-ancestor > a{
 	background: #00a4d0 !important;
 	color: #fff;
-
 }
 #menu_row .navbar-collapse .navbar-nav > li {
     padding: 0 0 9px!important;
@@ -149,13 +149,14 @@ CONTENT MIDDLE
     max-width: 100%;
 }
 .mksystem-icons{
-	background: #5cb0d8;
-	border-radius: 60px;
+    background: #5cb0d8;
+    border-radius: 60px;
     opacity: 0.61;
+    padding: 15px 0 5px;
     position: absolute;
-    right: 137px;
-    top: 27px;
-    z-index: 2;
+    right: 155px;
+    top: 35px;
+    z-index: 200;
 }
 .mksystem-icons ul{
 
@@ -209,6 +210,7 @@ header .fallback_cb > ul > li > ul li a,
 header .fallback_cb > ul > li > ul li a:hover{
 	color: #FFF;
 	border-bottom: 1px solid #fff;
+	text-transform: capitalize;
 }
 .carousel-control .fa{
 	font-size: 100px;
@@ -258,7 +260,7 @@ body > .container .row.content_squeeze_more.main_content {
 }
 .header-line p{
 	margin: 0;
-	padding: 5px 0;
+	padding: 5px 20px 5px 0;
 }
 .header-line-2{
 	background: #76C0D9;
@@ -288,8 +290,7 @@ header .main-header #menu_row{
 }
 .carousel-indicators{
 	left: auto;
-	margin: 0;
-	padding: 0 20px 0 0;
+	padding: 0 50px 0 0;
 	position: relative;
 	text-align: right;
 	width: 100%;
@@ -333,18 +334,99 @@ body,
 .carousel-indicators-block{
 	bottom: 15px;
 	position: absolute;
-	right: 200px;
+	width: 100%;
+	z-index: 100;
 }
 a.bandera img{
 	margin: 4px 3px 0 0;
 	max-width: 28px;
 	vertical-align: top;
 }
-
+.main-header .logo-shop-border{
+	background: transparent; 
+	display: block;
+	height: 100%;
+	left: 43.5%;
+	position: absolute;
+	width: auto;
+	z-index: 20;
+}
+.logo-shop-border .border-left{
+	border-right: 35px solid #fff;
+	border-top: 193px solid #19A5C9;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+}
+.logo-shop-border .border-right{
+	border-bottom: 193px solid transparent;
+	border-left: 35px solid #fff;
+	display: inline-block;
+	height: 100%;
+	margin-left: -4px;
+	vertical-align: top;
+}
+.fa-facebook-official, 
+.fa-envelope{
+	transform: rotate(-30deg);
+}
+.carousel-control{
+	z-index: 100;
+}
+.carousel-background{
+	background: transparent;
+	border: 30px solid rgba(255, 255, 255, 0.5);
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+.carousel-marco{
+	background: transparent;
+	border: 2px solid #fff;
+	height: 100%;
+	width: 100%;
+}
+.mksystem-icons a:hover, 
+.mksystem-icons a:hover span.glyphicon{
+	color: #000;
+	opacity: 0.9;
+}
+.mksystem-icons:hover{
+	opacity: 0.75;
+}
 /*
 * STYLES VERSION 2.0 (JMATURRANO) - END
 */
 
+
+
+/*
+* PAGE HISTORIA
+*/
+.content-page-historia{
+	padding: 50px;
+}
+.content-page-marco{
+	background: #d7eaf5;
+	border: 6px solid #f3f3f3;
+	padding: 20px;
+}
+.text-justify{
+	text-align: justify;
+}
+.mksystem-img-thumbnail{
+	display: block;
+	margin-bottom: 15px;
+}
+.mksystem-img-thumbnail .img-thumbnail{
+	background-color: #19a5c9;
+    border: 1px solid #19a5c9;
+    border-radius: 0;
+}
+/*
+* PAGE HISTORIA - END
+*/
 
 
 
