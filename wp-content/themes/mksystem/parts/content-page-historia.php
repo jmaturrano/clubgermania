@@ -3,7 +3,7 @@
 	<div class="content-page content-page-historia mksystem-content-bg">
 		<div class="content-page-marco">
 		<?php 
-			$query = new WP_Query( array( 'cat' => 'historia_club', 'posts_per_page' => -1) );
+			$query = new WP_Query( array( 'category_name' => 'historia_club', 'posts_per_page' => -1) );
 			if ($query->have_posts()) :
 				$item = 1;
 				while ($query->have_posts()) : $query->the_post();
