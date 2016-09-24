@@ -24,13 +24,13 @@
                     $post_meta = get_post_meta($post->ID);
                     $meta_nombre    = isset($post_meta['nombre'][0])?$post_meta['nombre'][0]:'Complete el campo <strong>nombre</strong>';
                     $meta_cargo     = isset($post_meta['cargo'][0])?$post_meta['cargo'][0]:'Complete el campo <strong>cargo</strong>';
-                    $meta_periodo   = isset($post_meta['periodo'][0])?$post_meta['periodo'][0]:'Complete el campo <strong>período</strong>';
+                    //$meta_periodo   = isset($post_meta['periodo'][0])?$post_meta['periodo'][0]:'Complete el campo <strong>período</strong>';
                 ?>
                 <div class="block-title-page text-center">
                     <div class="border-title-page"></div>
                     <h2><?= $meta_nombre; ?></h2>
                     <h3><?= $meta_cargo; ?></h3>
-                    <h3><?= $meta_periodo; ?></h3>
+                    <h3>&nbsp;</h3>
                 </div>
                 <div class="text-justify" style="margin-top: 20px;">
                     <?php the_content(); ?>

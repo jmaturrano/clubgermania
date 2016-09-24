@@ -134,7 +134,7 @@ function mksystem_header_scripts() {
     jQuery('.carousel').carousel();
     jQuery(document).ready(function(){
       jQuery(document).scroll(function(e) {
-          if(jQuery(this).scrollTop() > jQuery('header').height()) {
+          if(jQuery(this).scrollTop() > jQuery('.header-line-1').height()) {
               jQuery('header').addClass('border-header');
           } else {
               jQuery('header').removeClass('border-header');

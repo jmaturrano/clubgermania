@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Pagina Presidente
+ * Template Name: Pagina Administrador
  *
  * This is the template that displays full width page without sidebar
  *
@@ -19,7 +19,7 @@ get_header(); ?>
 
 	        while (have_posts()) {
 	            the_post();
-	            get_template_part( 'parts/content', 'page-presidenta');
+	            get_template_part( 'parts/content', 'page-administradora');
 	        }
 	    } else {
 	            get_template_part( 'parts/error', 'no_results');
