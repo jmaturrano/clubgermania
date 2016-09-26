@@ -8,11 +8,62 @@ function get_template_directory_child(){
 
 function mksystem_customizer_register( $wp_customize ) {
 
+
+  //color de Tema
+  $wp_customize->add_setting('color_mksystem_theme',array(
+    'default' => '#19a5c9',
+    'transport' => 'refresh'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Color_Control( $wp_customize, 'color_mksystem_theme', array(
+    'label'        => __( 'Color del tema <style>#accordion-section-setup, #accordion-section-general, #accordion-panel-banner_settings, #accordion-section-fp-social, #accordion-section-fp-action1, #accordion-section-fp-featured, #accordion-section-fp-about, #accordion-section-fp-action2, #accordion-section-fp-team, #accordion-section-fp-team,#customize-control-background_color{display:none !important;}</style>', 'mksystem' ),
+    'section'    => 'colors',
+    'settings'   => 'color_mksystem_theme',
+  )));
+  //color de Cabecera
+
+  $wp_customize->add_section('mksystem_header',array(
+    'title' => __('Color Cabecera', 'mksystem'),
+    'priority' => 100
+  ));
+    $wp_customize->add_setting('mksystem_header_1',array(
+    'default' => '#1aa4c8',
+    'transport' => 'refresh'
+  ));
+    $wp_customize->add_control(
+    new WP_Customize_Color_Control( $wp_customize, 'mksystem_header_1', array(
+    'label'        => __( 'Color 1 <style>#accordion-section-fp-news,#accordion-section-fp-contact, #accordion-section-blog-settings{display:none !important;}</style>', 'mksystem' ),
+    'section'    => 'mksystem_header',
+    'settings'   => 'mksystem_header_1',
+  )));
+ 
+    $wp_customize->add_setting('mksystem_header_2',array(
+    'default' => '#76c0d9',
+    'transport' => 'refresh'
+  ));
+    $wp_customize->add_control(
+    new WP_Customize_Color_Control( $wp_customize, 'mksystem_header_2', array(
+    'label'        => __( 'Color 2', 'mksystem' ),
+    'section'    => 'mksystem_header',
+    'settings'   => 'mksystem_header_2',
+  )));
+
+    $wp_customize->add_setting('mksystem_header_3',array(
+    'default' => '#cee6f0',
+    'transport' => 'refresh'
+  ));
+    $wp_customize->add_control(
+    new WP_Customize_Color_Control( $wp_customize, 'mksystem_header_3', array(
+    'label'        => __( 'Color 3', 'mksystem' ),
+    'section'    => 'mksystem_header',
+    'settings'   => 'mksystem_header_3',
+  )));
+ 
+
   // customizer logo
 
-  $wp_customize->add_section(
-        'mksystem_logo',
-        array(
+
+  $wp_customize->add_section('mksystem_logo',array(
             'title' => __('Logo', 'mksystem'),
             'priority' => 100
         )
@@ -23,7 +74,7 @@ function mksystem_customizer_register( $wp_customize ) {
   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'Logo_mksystem' , array(
     'label' => __('Imagen Logo' , 'mksystem'),
     'section' => 'mksystem_logo',
-    'settings' => 'Logo_mksystem'
+    'settings' => 'Logo_mksystem',
   )));
 
     // customizer slider
@@ -91,6 +142,24 @@ function mksystem_customizer_register( $wp_customize ) {
   )));
 
 
+  //color de Menu
+  $wp_customize->add_section('color_mksystem_Menu',array(
+            'title' => __('Color de Menu', 'mksystem'),
+            'priority' => 100
+        )
+    );
+
+  $wp_customize->add_setting('color_Menu',array(
+    'default' => '#93c7e4',
+    'transport' => 'refresh'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Color_Control( $wp_customize, 'color_Menu', array(
+    'label'        => __( 'Color del Menu <style>#accordion-section-background_image,#accordion-panel-widgets,#accordion-section-static_front_page{display:none !important;}</style>','mksystem' ),
+    'section'    => 'color_mksystem_Menu',
+    'settings'   => 'color_Menu'
+  )));
+
 }
 add_action('customize_register','mksystem_customizer_register');
 
@@ -115,6 +184,46 @@ function mksystem_header_styles() {
         background-position: center center;
         background-repeat: repeat-y;
     }
+ /* Color de Fondo de Logo*/
+    .main-header .logo-shop{
+
+        background: <?php echo get_theme_mod('color_mksystem_theme'); ?>;
+        position: absolute;
+        width: 45%;
+    }
+    .logo-shop-border .border-left{
+
+        border-right: 35px solid #fff;
+        border-top: 193px solid <?php echo get_theme_mod('color_mksystem_theme'); ?>;
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+    }
+    /*color de Cabecera*/
+    .header-line-1{
+        background: <?php echo get_theme_mod('mksystem_header_1'); ?>;
+    }
+    .header-line-2{
+        background: <?php echo get_theme_mod('mksystem_header_2'); ?>;
+    }
+    .header-line-3{
+        background: <?php echo get_theme_mod('mksystem_header_3'); ?>;
+    }
+    #menu-principal .menu-item >a:hover,
+    .current-menu-item a, 
+    #menu-principal > .menu-item.current-menu-ancestor > a{
+        background: <?php echo get_theme_mod('color_mksystem_theme'); ?>!important;
+        color: #fff;
+    }
+    /*Color de menu*/
+    #menu-principal >.menu-item >a{
+        background: <?php echo get_theme_mod('color_Menu'); ?>!important;
+        font-size:14px;
+        color: #fff;
+        border-radius: 40px;
+        padding: 6px 16px 5px 20px!important;
+    }
+
   </style>
 <?php
 }
