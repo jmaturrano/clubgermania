@@ -1,11 +1,17 @@
 
 <?php 
-
+    global $items_slider;
     $post_slug = $post->post_name;
     if(isset($post_slug) && $post_slug != ''){
         $query = new WP_Query( array( 'category_name' => $post_slug, 'posts_per_page' => -1) );
         if ($query->have_posts()) :
 
+            while ($query->have_posts()) : $query->the_post();
+                if ( has_post_thumbnail() ) {
+                    $items_slider = true;
+                }
+            endwhile;
+            if($items_slider):
 ?>
 <div class="content-middle"  id="main">
     <div class=""><!--.container-->
@@ -72,6 +78,7 @@
 </div><!--content-middle-->
 
     <?php
+            endif;
         endif;
     }
 ?>
