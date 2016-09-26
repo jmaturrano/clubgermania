@@ -458,6 +458,42 @@ header.border-header{
 
 
 /*
+* PAGE DIRECTIVOS
+*/
+.block-title-complex{
+	position: relative;
+}
+.block-title-complex .mksystem-triangulo{
+	border-bottom: 30px solid transparent;
+	border-left: 50px solid #19a5c9;
+	border-top: 30px solid transparent;
+	left: 0;
+	right: auto;
+	top: 0;
+}
+.block-title-complex .block-title-page{
+	margin-left: 48px;
+}
+.directivo-cargo, 
+.directivo-nombre{
+	display: block;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.directivo-cargo{
+	color: #19a5c9;
+}
+.directivo-nombre{
+	color: #000;
+}
+/*
+* PAGE DIRECTIVOS - END
+*/
+
+
+
+
+/*
 responsive
 */
 @media screen and (max-width: 1024px){
