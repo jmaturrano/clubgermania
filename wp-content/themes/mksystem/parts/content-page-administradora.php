@@ -2,7 +2,7 @@
 <div <?php post_class('row'); ?>>
     <div class="content-page content-page-presidenta mksystem-content-bg">
         <div class="content-page-marco">
-            <div class="col-md-5">
+            <div class="col-md-5 text-right">
                 <?php
                 if (get_post_meta($post->ID, 'toggle_featured', true) == "show") {
                     ?>
@@ -11,7 +11,10 @@
                         </div>
                         <a class="mksystem-img-thumbnail" href="javascript:;">
                         <?php
-                            get_template_part( 'parts/image', '1168_526');
+                            //get_template_part( 'parts/image', '1168_526');
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('thumbnail', array('class' => 'img-thumbnail img-responsive sub_banner'));
+                            }
                         ?>
                         </a>
                     </div>
@@ -28,9 +31,9 @@
                 ?>
                 <div class="block-title-page text-center">
                     <div class="border-title-page"></div>
-                    <h2><?= $meta_nombre; ?></h2>
-                    <h3><?= $meta_cargo; ?></h3>
-                    <h3>&nbsp;</h3>
+                    <h3><?= $meta_nombre; ?></h3>
+                    <h5><?= $meta_cargo; ?></h5>
+                    <h5>&nbsp;</h5>
                 </div>
                 <div class="text-justify" style="margin-top: 20px;">
                     <?php the_content(); ?>

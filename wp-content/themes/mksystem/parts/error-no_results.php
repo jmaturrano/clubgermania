@@ -1,2 +1,2 @@
-<p><?php _e('No content matched your request.', 'simple-business-wp'); ?></p>
+<p><?php _e('No se han encontrado coincidencias....', 'simple-business-wp'); ?></p>
 

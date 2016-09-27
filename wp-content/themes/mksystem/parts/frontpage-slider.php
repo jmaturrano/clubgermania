@@ -1,7 +1,7 @@
 <div class="content-middle" id="main">
     <div class="container"><!--.container-->
         <div class="row"><!--.row-->
-            <div class="col-md-12" style="position: relative;"><!--.col-md-12-->
+            <div class="" style="position: relative;"><!--.col-md-12-->
 
                 <div class="mksystem-icons text-center">
                     <ul>
@@ -12,7 +12,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/directivos')); ?>">
+                            <a href="javascript:;">
                                 <span class=" glyphicon glyphicon-user"></span>
                                 <span class="tex-ico">SOCIOS</span>
                             </a>
@@ -148,7 +148,7 @@
 
                 </div><!--.carousel.slide-->
 
-            </div><!--.col-md-12-->
+            </div><!--.-->
         </div><!--.row-->
     </div><!--.container-->
 </div><!--content-middle-->

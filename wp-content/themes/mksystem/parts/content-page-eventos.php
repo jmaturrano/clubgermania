@@ -2,8 +2,17 @@
 <div <?php post_class('row'); ?>>
 	<div class="content-page content-page-eventos mksystem-content-bg">
 		<div class="content-page-marco">
-			<div class="col-md-4">
-				<p>jmaturrano</p>
+			<div class="col-md-4 text-center">
+                <div class="unique-image">
+                    <a class="mksystem-img-thumbnail" href="javascript:;">
+                    <?php
+                        //get_template_part( 'parts/image', '1168_526');
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('thumbnail', array('class' => 'img-thumbnail sub_banner'));
+                        }
+                    ?>
+                    </a>
+                </div>
 			</div>
 			<div class="col-md-8">
 		<?php 
@@ -16,7 +25,7 @@
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<a href="<?= get_permalink($post->ID); ?>" class="mksystem-img-thumbnail text-center">
 								<?php
-									the_post_thumbnail('medium', array('class'=>'img-thumbnail'));
+									the_post_thumbnail('thumbnail', array('class'=>'img-thumbnail'));
 								?>
 								<span><?= get_the_title(); ?></span>
 							</a>

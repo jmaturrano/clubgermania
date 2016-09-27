@@ -40,7 +40,7 @@ if (empty($sidebar_select) || ($sidebar_select == 'none')) {
 } else {
     exit();
 ?>
-    <div <?php post_class('main_content content row content_squeeze'); ?>>
+    <div <?php post_class('main_content content row content_squeeze jmaturrano2'); ?>>
 
         <div class="col-sm-8 <?php echo $sidebar_select_content_classes; ?>">
             <h2 class="page_title"><?php get_template_part( 'parts/title', 'page'); ?></h2>

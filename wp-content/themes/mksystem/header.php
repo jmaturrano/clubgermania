@@ -12,7 +12,7 @@
     <body <?php body_class(); ?> id="<?php if (simple_business_wp_get_option('home-slug')=='') {echo "home";} else {echo esc_attr(simple_business_wp_get_option('home-slug'));} ?>">
         <header>
             <?php 
-            get_template_part( 'parts/header', 'contentfull'); 
+            get_template_part( 'parts/header', 'content'); 
             ?>
         </header>
           

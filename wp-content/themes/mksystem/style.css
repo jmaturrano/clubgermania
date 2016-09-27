@@ -21,6 +21,12 @@ Aquí empieza la personalización del tema
 /*
 HEADER
 */
+body{
+	font: 400 14px/1.8em "Century Gothic";
+}
+.navbar-default .navbar-brand, .navbar-default a, .navbar-brand a, .navbar-default:hover .navbar-brand:hover, .navbar-default a:hover, .navbar-brand a:hover{
+	font-family: "Century Gothic" !important;
+}
 .header_logo img {
 	left: 20%;	
 	max-width: 190px;
@@ -35,7 +41,7 @@ header icono
 .icono{
 	padding: 0 6px;
 	color:#FFF;
-	font-size: 21px;
+	font-size: 18px;
 }
 
 .text-right{
@@ -89,16 +95,6 @@ header icono
 #menu_row { 
     padding-left: 0px;
 }
-
-#menu_row .dropdown-menu {
-    background-color: #68b8dd;
-    border: 0px;
-}
-#menu_row .dropdown-menu {
-    background-color: #68b8dd;
-    border: 0px;
-}
-
 .nav > li > a:focus, .fallback_cb > ul > li > a, .fallback_cb > ul > li > a:hover {
     color: #fff;
     border-radius: 30
@@ -126,28 +122,11 @@ CONTENT MIDDLE
     margin-left: 0px;
     max-width: 100%;
 }
-.mksystem-icons{
-    background: #5cb0d8;
-    border-radius: 60px;
-    opacity: 0.61;
-    padding: 15px 0 5px;
-    position: absolute;
-    right: 155px;
-    top: 35px;
-    z-index: 200;
-}
 .mksystem-icons ul{
-
 	padding: 2px 0;
-
 }
 .mksystem-icons li{
 	list-style: none;
-}
-.mksystem-icons a{
-	color: #fff;
-	padding: 4px;
-	display: inline-block;
 }
 .mksystem-icons a span.glyphicon{
 	font-size: 21px;
@@ -168,10 +147,6 @@ CONTENT MIDDLE
 	background-color:#d7eaf5;
 	padding: 35px; 
 }
-.carousel-indicators .active {
-    background-color: #5ab2d8;
-    border: 1px solid #5ab2d8;
-}
 .carousel-indicators li {
     background-color: #FFF;
 }
@@ -182,13 +157,6 @@ CONTENT MIDDLE
 }
 #copyright{
 	padding-top:18px; 
-}
-.navbar-default .navbar-nav > li li a,
-header .fallback_cb > ul > li > ul li a,
-header .fallback_cb > ul > li > ul li a:hover{
-	color: #FFF;
-	border-bottom: 1px solid #fff;
-	text-transform: capitalize;
 }
 .carousel-control .fa{
 	font-size: 100px;
@@ -235,7 +203,7 @@ body > .container .row.content_squeeze_more.main_content {
 */
 .header-line p{
 	margin: 0;
-	padding: 5px 20px 5px 0;
+	padding: 1px 20px 1px 0;
 }
 
 
@@ -247,17 +215,17 @@ body > .container .row.content_squeeze_more.main_content {
 }
 
 .logo-shop img{
-	max-width: 224px;
+	max-width: 165px;
 }
 header .main-header #menu_row{
-	padding: 20px 0;
+	padding: 9px 0;
 }
 #slideshow  {
 	width:100%;
 }
 .carousel-indicators{
 	left: auto;
-	padding: 0 50px 0 0;
+	padding: 0 120px 0 0;
 	position: relative;
 	text-align: right;
 	width: 100%;
@@ -302,34 +270,39 @@ body,
 	bottom: 15px;
 	position: absolute;
 	width: 100%;
-	z-index: 100;
+	z-index: 500;
 }
 a.bandera img{
-	margin: 4px 3px 0 0;
-	max-width: 28px;
+	margin: 5px 3px 0 0;
+	max-width: 25px;
 	vertical-align: top;
 }
 .main-header .logo-shop-border{
 	background: transparent; 
 	display: block;
 	height: 100%;
-	left: 43.5%;
+	left: 34.5%;
 	position: absolute;
 	width: auto;
 	z-index: 20;
 }
 
 .logo-shop-border .border-right{
-	border-bottom: 193px solid transparent;
-	border-left: 35px solid #fff;
+	border-bottom: 141px solid transparent;
+	border-left: 55px solid #fff;
 	display: inline-block;
 	height: 100%;
-	margin-left: -4px;
+	margin-left: -5px;
 	vertical-align: top;
 }
-.fa-facebook-official, 
+.fa-facebook-official,
+.fa-twitter-square,
+.fa-instagram,
+.fa-youtube-play,
+.fa-vimeo-square,
+.fa-share-alt, 
 .fa-envelope{
-	transform: rotate(-30deg);
+	transform: rotate(-26deg);
 }
 .carousel-control{
 	z-index: 100;
@@ -348,11 +321,6 @@ a.bandera img{
 	height: 100%;
 	width: 100%;
 }
-.mksystem-icons a:hover, 
-.mksystem-icons a:hover span.glyphicon{
-	color: #000;
-	opacity: 0.9;
-}
 .mksystem-icons:hover{
 	opacity: 0.75;
 }
@@ -365,11 +333,8 @@ header{
 	width: 100%;
 	z-index: 1000;
 }
-header.border-header{
-	border-bottom: 1px solid #cee6f0;
-}
 #main{
-	padding-top: 193px;
+	padding-top: 142px;
 }
 .text-justify{
 	text-align: justify;
@@ -378,40 +343,13 @@ header.border-header{
 	padding: 35px;
 	position: relative;
 }
-.mksystem-triangulo{
-    border-bottom: 33px solid transparent;
-    border-left: 55px solid #19a5c9;
-    border-top: 33px solid transparent;
-    height: 0;
-    position: absolute;
-    right: -25px;
-    top: 35px;
-    width: 0;
-}
-.block-title-page{
-	background: #19a5c9;
-    margin-top: 20px;
-    max-height: 111px;
-    padding: 15px;
-    position: relative;
-    width: 300px;
-}
 .block-title-page h2, 
 .block-title-page h3{
-    color: #fff;
-    font-weight: 600;
-    margin: 0;
-    position: relative;
-    text-transform: uppercase;
+	font-family: "Century Gothic Bold";
 }
-.border-title-page {
-	border-bottom: 111px solid #19a5c9;
-    border-right: 55px solid transparent;
-    display: inline-block;
-    height: 0;
-    position: absolute;
-    right: -55px;
-    top: 0;
+.block-title-page h4, 
+.block-title-page h5{
+	font-family: "Century Gothic";
 }
 /*
 * STYLES VERSION 2.0 (JMATURRANO) - END
@@ -424,19 +362,9 @@ header.border-header{
 .content-page{
 	padding: 50px;
 }
-.content-page-marco{
-	background: #d7eaf5;
-	border: 6px solid #f3f3f3;
-	padding: 20px;
-}
 .mksystem-img-thumbnail{
 	display: block;
 	margin-bottom: 15px;
-}
-.mksystem-img-thumbnail .img-thumbnail{
-	background-color: #19a5c9;
-    border: 1px solid #19a5c9;
-    border-radius: 0;
 }
 .mksystem-img-thumbnail .img-thumbnail.img-responsive{
     padding-bottom: 35px;
@@ -463,28 +391,15 @@ header.border-header{
 .block-title-complex{
 	position: relative;
 }
-.block-title-complex .mksystem-triangulo{
-	border-bottom: 30px solid transparent;
-	border-left: 50px solid #19a5c9;
-	border-top: 30px solid transparent;
-	left: 0;
-	right: auto;
-	top: 0;
-}
 .block-title-complex .block-title-page{
 	margin-left: 48px;
 }
 .directivo-cargo, 
 .directivo-nombre{
 	display: block;
+	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
-}
-.directivo-cargo{
-	color: #19a5c9;
-}
-.directivo-nombre{
-	color: #000;
 }
 /*
 * PAGE DIRECTIVOS - END

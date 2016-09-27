@@ -14,7 +14,7 @@ get_header(); ?>
 <?php
 	global $items_slider;
 	$items_slider = false;
-	get_template_part( 'parts/frontpage','slider-serviciosfull');
+	get_template_part( 'parts/frontpage','slider-servicios');
 ?>
 
 	<main class="site-main" role="main" <?php if(!$items_slider): echo 'id="main"'; endif; ?>>

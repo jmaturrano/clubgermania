@@ -6,14 +6,14 @@
                 <div class="block-title-complex">
                     <div class="mksystem-triangulo"></div>
                     <div class="block-title-page text-center">
-                        <h2>CONSEJO DIRECTIVO</h2>
+                        <h3>CONSEJO DIRECTIVO</h3>
                     </div>
                 </div>
             </div>
             <div class="clearfix"><br></div><!--.clearfix-->
 
         <?php 
-            $query = new WP_Query( array( 'category_name' => 'consejo_directivo', 'posts_per_page' => -1) );
+            $query = new WP_Query( array( 'category_name' => 'consejo_directivo', 'posts_per_page' => -1, 'orderby' => 'menu_order') );
             if ($query->have_posts()) :
                 $item = 1;
                 while ($query->have_posts()) : $query->the_post();
@@ -24,7 +24,7 @@
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="<?= get_permalink($post->ID); ?>" class="mksystem-img-thumbnail text-center">
                                 <?php
-                                    the_post_thumbnail('medium', array('class'=>'img-thumbnail'));
+                                    the_post_thumbnail('thumbnail', array('class'=>'img-thumbnail'));
                                 ?>
                                 <span class="directivo-cargo"><?= get_the_title(); ?></span>
                                 <span class="directivo-nombre"><?= $meta_nombre; ?></span>
@@ -50,7 +50,7 @@
                 <div class="block-title-complex">
                     <div class="mksystem-triangulo"></div>
                     <div class="block-title-page text-center">
-                        <h2>JUNTA CALIFICADORA</h2>
+                        <h3>JUNTA CALIFICADORA</h3>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="<?= get_permalink($post->ID); ?>" class="mksystem-img-thumbnail text-center">
                                 <?php
-                                    the_post_thumbnail('medium', array('class'=>'img-thumbnail'));
+                                    the_post_thumbnail('thumbnail', array('class'=>'img-thumbnail'));
                                 ?>
                                 <span class="directivo-nombre"><?= get_the_title(); ?></span>
                             </a>
