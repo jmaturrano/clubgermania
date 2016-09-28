@@ -1,4 +1,7 @@
         </div> <!-- //.container -->
+
+
+    <footer>
         <?php if (is_active_sidebar( 'Footer Left' ) || is_active_sidebar( 'Footer Center' ) || is_active_sidebar( 'Footer Right' )) { ?>
         <div class="container footer">
             <div class="row content_squeeze footer_widgets">
@@ -29,10 +32,11 @@
         <div class="container noborder ">
             <div class="row">
                 <div class="col-md-5">
-                    <p id="copyright"><?php if (simple_business_wp_get_option('copyright') != '') { echo esc_html(simple_business_wp_get_option('copyright')); } else { echo "&copy ". esc_html(get_bloginfo( 'name' )) . " " . date('Y'); } ?> - Desarrollado por Mksystem</p>
+                    <p id="copyright"><?php if (simple_business_wp_get_option('copyright') != '') { echo esc_html(simple_business_wp_get_option('copyright')); } else { echo "&copy ". esc_html(get_bloginfo( 'name' )) . " " . date('Y'); } ?> - Desarrollado por MK System</p>
                 </div>
             </div><!--.row-->
         </div><!--.container-->
+    </footer>
 <?php wp_footer(); ?>
 </body>
 </html>

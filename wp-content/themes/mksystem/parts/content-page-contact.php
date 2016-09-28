@@ -15,7 +15,7 @@
                     if(isset($_POST['submitted'])) { 
                         if(isset($_POST['myname']) && isset($_POST['email'])) {
                             if((trim($_POST['myname']) != "" ) && (trim($_POST['email']) != "" )) { ?>
-                                <p class="bg-success"><?php echo _e('Thanks for contacting us!', 'simple-business-wp'); ?></p>
+                                <p class="bg-success"><?php echo _e('Gracias por escribirnos!', 'simple-business-wp'); ?></p>
                             <?php } else { ?>
                                 <p class="bg-danger"><?php echo _e('Por favor ingrese su nombre y su email.', 'simple-business-wp'); ?></p>
                             <?php 
@@ -55,7 +55,7 @@
                                 <div class="text-center">
                                     <input type="hidden" name="scrolltoform" value="<?php if (simple_business_wp_get_option('fp-contact-slug')=='') {echo "contact";} else {echo esc_attr(simple_business_wp_get_option('fp-contact-slug'));} ?>">
                                     <input type="hidden" name="submitted" id="submitted" value="true" />
-                                    <input data-sr="wait 0.3s, enter right and move 50px after 1s" type="submit" name="submit_button" id="submit_button" value="Enviar" class="contact-submit btn btn-primary" />
+                                    <input data-sr="wait 0.3s, enter right and move 50px after 1s" type="submit" name="submit_button" id="submit_button" value="Enviar" class="contact-submit btn btn-theme" />
                                 </div>
                             </form>
                         </div>

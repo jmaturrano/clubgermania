@@ -2,7 +2,7 @@
 <div <?php post_class('row'); ?>>
     <div class="content-page content-page-presidenta mksystem-content-bg">
         <div class="content-page-marco">
-            <div class="col-md-5 text-right">
+            <div class="col-md-5 col-sm-5 col-xs-5 text-right">
                 <?php
                 if (get_post_meta($post->ID, 'toggle_featured', true) == "show") {
                     ?>
@@ -22,7 +22,7 @@
                 }//end if
                 ?>
             </div><!--.col-md-12-->
-            <div class="col-md-7">
+            <div class="col-md-7 col-sm-7 col-xs-7">
                 <?php 
                     $post_meta = get_post_meta($post->ID);
                     $meta_nombre    = isset($post_meta['nombre'][0])?$post_meta['nombre'][0]:'Complete el campo <strong>nombre</strong>';

@@ -33,7 +33,7 @@
                         <?php
                         if($item == 4){
                         ?>
-                        <div class="clearfix"></div><!--.clearfix-->
+                        <div class="clearfix hidden-sm hidden-xs"></div><!--.clearfix-->
                         <?php
                             $item = 0;
                         }//end if
@@ -74,7 +74,7 @@
                         <?php
                         if($item == 4){
                         ?>
-                        <div class="clearfix"></div><!--.clearfix-->
+                        <div class="clearfix hidden-sm hidden-xs"></div><!--.clearfix-->
                         <?php
                             $item = 0;
                         }//end if

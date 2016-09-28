@@ -13,9 +13,9 @@
             endwhile;
             if($items_slider):
 ?>
-<div class="content-middle"  id="main">
-    <div class="container"><!--.container-->
-        <div class="row"><!--.row-->
+
+    <div class="row" style="position: relative;"><!--.row-->
+        <div style="position: absolute; max-width: 100%;">
             <div class="" style="position: relative;"><!--.col-md-12-->
                 <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow_servicios">
 
@@ -73,9 +73,8 @@
 
                 </div><!--.carousel.slide-->
             </div><!--.col-md-12-->
-        </div><!--.row-->
-    </div><!--.container-->
-</div><!--content-middle-->
+        </div><!--.-->
+    </div><!--.row-->
 
     <?php
             endif;

@@ -341,16 +341,13 @@ function mksystem_header_styles() {
  /* Color de Fondo de Logo*/
     .main-header .logo-shop{
         background: <?php echo get_theme_mod('color_mksystem_theme'); ?>;
-        max-height: 141px;
-        position: absolute;
-        width: 25%;
+        display: inline-block;
+        width: 392px;
     }
     .logo-shop-border .border-left{
         border-right: 55px solid #fff;
-        border-top: 141px solid <?php echo get_theme_mod('color_mksystem_theme'); ?>;
+        border-top: 142px solid <?php echo get_theme_mod('color_mksystem_theme'); ?>;
         display: inline-block;
-        height: 100%;
-        vertical-align: top;
     }
     /*color de Cabecera*/
     .header-line-1{
@@ -486,6 +483,32 @@ function mksystem_header_styles() {
     .content-page-eventos .mksystem-img-thumbnail .img-thumbnail{
       border: 3px solid <?php echo get_theme_mod('color_mksystem_theme'); ?>;
     }
+    .btn-theme{
+      background-color: <?php echo get_theme_mod('color_mksystem_theme'); ?>;
+      background-image: none !important;
+      border: medium none !important;
+      border-radius: 0 !important;
+      color: <?php echo get_theme_mod('mksystem_color_text_menu'); ?> !important;
+    }
+
+    @media screen and (max-width: 736px){
+      #menu_row, 
+      .navbar-default .navbar-toggle,
+      .navbar-default .navbar-toggle{
+        background-color: <?php echo get_theme_mod('color_mksystem_theme'); ?> !important;
+        border-color: <?php echo get_theme_mod('mksystem_color_text_menu'); ?> !important;
+      }
+      .navbar-default .navbar-toggle .icon-bar{
+        background-color: <?php echo get_theme_mod('mksystem_color_text_menu'); ?> !important;
+      }
+      .navbar-default .navbar-nav > li li a,
+      header .fallback_cb > ul > li > ul li a,
+      header .fallback_cb > ul > li > ul li a:hover{
+        border-bottom: 0 none;
+        border-top: 1px solid <?= get_theme_mod('mksystem_color_text_menu'); ?>;
+      }
+    }
+    
   </style>
 <?php
 }
