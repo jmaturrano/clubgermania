@@ -18,7 +18,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo esc_url(home_url('/?s=')); ?>">
+                            <a href="<?php echo esc_url(home_url('/buscar')); ?>">
                                 <span class=" glyphicon glyphicon-search"></span>
                                 <span class="tex-ico">BUSCAR</span>
                             </a>

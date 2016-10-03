@@ -292,16 +292,39 @@ function mksystem_customizer_register( $wp_customize ) {
        'type'      => 'checkbox'
   ));
 
+
+
+  $wp_customize->add_section('mksystem_contacto',array(
+    'title' => __('Contacto', 'mksystem'),
+    'priority' => 100
+  ));
   $wp_customize->add_setting('check_contactform',array(
       'default' => true
   ));
   $wp_customize->add_control( 'check_contactform', array(
        'settings' => 'check_contactform',
-       'section'   => 'mksystem_social_links',
+       'section'   => 'mksystem_contacto',
        'label'     => __('Ver Formulario contacto','mksystem'),
        'type'      => 'checkbox'
   ));
-
+  $wp_customize->add_setting('social_direccion',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control('social_direccion',array(
+    'label' => __('Dirección','mksystem'),
+    'section' => 'mksystem_contacto',
+    'setting' => 'social_direccion',
+    'type'    => 'text'
+  ));
+  $wp_customize->add_setting('social_mapzoom',array(
+    'default' => '12'
+  ));
+  $wp_customize->add_control('social_mapzoom',array(
+    'label' => __('Map zoom (1-20)','mksystem'),
+    'section' => 'mksystem_contacto',
+    'setting' => 'social_mapzoom',
+    'type'    => 'text'
+  ));
 
 }
 add_action('customize_register','mksystem_customizer_register');
@@ -454,7 +477,7 @@ function mksystem_header_styles() {
       border-bottom: 74px solid <?php echo get_theme_mod('color_mksystem_theme'); ?>;
       border-right: 55px solid transparent;
       display: inline-block;
-      height: 0;
+      height: 100%;
       position: absolute;
       right: -55px;
       top: 0;
@@ -490,8 +513,12 @@ function mksystem_header_styles() {
       border-radius: 0 !important;
       color: <?php echo get_theme_mod('mksystem_color_text_menu'); ?> !important;
     }
+    .social-icons-mobile{
+      background-color: <?php echo get_theme_mod('color_mksystem_theme'); ?>;
+      border-bottom: 1px solid <?php echo get_theme_mod('mksystem_color_text_menu'); ?>;
+    }
 
-    @media screen and (max-width: 736px){
+    @media screen and (max-width: 767px){
       #menu_row, 
       .navbar-default .navbar-toggle,
       .navbar-default .navbar-toggle{
@@ -553,35 +580,35 @@ function mksystem_social_links(){
   }
 
   if(get_theme_mod('social_phone') != ''){
-    echo '<a href="tel: 01'.get_theme_mod('social_phone').'."><i class="fa fa-phone icono" style="margin-top: 1px;"></i></a>';
+    echo '<a title="'.get_theme_mod('social_phone').'" href="tel: 01'.get_theme_mod('social_phone').'."><i class="fa fa-phone icono" style="margin-top: 1px;"></i></a>';
   }
   
   if(get_theme_mod('social_facebook') != ''){
-    echo '<a target="_blank" href="'.get_theme_mod('social_facebook').'"><i class="icono fa fa-facebook-official"></i></a>';
+    echo '<a title="Facebook" target="_blank" href="'.get_theme_mod('social_facebook').'"><i class="icono fa fa-facebook-official"></i></a>';
   }
 
   if(get_theme_mod('social_twitter') != ''){
-    echo '<a target="_blank" href="'.get_theme_mod('social_twitter').'"><i class="icono fa fa-twitter-square"></i></a>';
+    echo '<a title="Twitter" target="_blank" href="'.get_theme_mod('social_twitter').'"><i class="icono fa fa-twitter-square"></i></a>';
   }
 
   if(get_theme_mod('social_instagram') != ''){
-    echo '<a target="_blank" href="'.get_theme_mod('social_instagram').'"><i class="icono fa fa-instagram"></i></a>';
+    echo '<a title="Instagram" target="_blank" href="'.get_theme_mod('social_instagram').'"><i class="icono fa fa-instagram"></i></a>';
   }
 
   if(get_theme_mod('social_youtube') != ''){
-    echo '<a target="_blank" href="'.get_theme_mod('social_youtube').'"><i class="icono fa fa-youtube-play"></i></a>';
+    echo '<a title="Youtube" target="_blank" href="'.get_theme_mod('social_youtube').'"><i class="icono fa fa-youtube-play"></i></a>';
   }
 
   if(get_theme_mod('social_vimeo') != ''){
-    echo '<a target="_blank" href="'.get_theme_mod('social_vimeo').'"><i class="icono fa fa-vimeo-square"></i></a>';
+    echo '<a title="Vimeo" target="_blank" href="'.get_theme_mod('social_vimeo').'"><i class="icono fa fa-vimeo-square"></i></a>';
   }
 
   if(get_theme_mod('social_mail') != ''){
-    echo '<a href="mailto:'.get_theme_mod('social_mail').'"><i class="icono fa fa-envelope fa-social"></i></a>';
+    echo '<a title="'.get_theme_mod('social_mail').'" href="mailto:'.get_theme_mod('social_mail').'"><i class="icono fa fa-envelope fa-social"></i></a>';
   }
 
   if(get_theme_mod('check_contactform')){
-    echo '<a href="'.esc_url(home_url( '/contacto' )).'"><i class="icono fa fa-share-alt"></i></a>';
+    echo '<a title="Contacto" href="'.esc_url(home_url( '/contacto' )).'"><i class="icono fa fa-share-alt"></i></a>';
   }
 
 }

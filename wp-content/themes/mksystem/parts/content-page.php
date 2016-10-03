@@ -2,8 +2,8 @@
 <div <?php post_class('row'); ?>>
     <div class="content-page content-page-default mksystem-content-bg">
         <div class="content-page-marco">
-            <div class="col-md-12">
-                <h2 class="page_title text-center"><?php get_template_part( 'parts/title', 'page'); ?></h2>
+            <div class="col-md-12 text-center">
+                <h2 class="page_title"><?php get_template_part( 'parts/title', 'page'); ?></h2>
                 <?php
                 if (get_post_meta($post->ID, 'toggle_featured', true) == "show") {
                     get_template_part( 'parts/image', '1168_526');

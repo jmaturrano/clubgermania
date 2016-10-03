@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying Search Results pages.
+ * Template Name: Pagina Search
  *
- * @package mksystem
+ * @package Mksystem
  */
 
 get_header(); ?>
@@ -13,20 +13,48 @@ get_header(); ?>
 
 				<?php if ( have_posts() ) : ?>
 
+				<?php 
+
+					if($_GET['search_text'] && !empty($_GET['search_text'])){
+						$text = $_GET['search_text'];
+					}
+
+				?>
 				<div <?php post_class('row'); ?>>
 				    <div class="content-page content-search mksystem-content-bg">
 				        <div class="content-page-marco">
-				            <div class="col-md-12">
-								<div class="col-md-6 search-custom">
-									<?php get_search_form(); ?>
-								</div>
-							</div><!--.col-md-12-->
 
-							<div class="clearfix"></div><!--.clearfix-->
+				        	<div class="col-md-12">
+								<h2 class="page_title"><?php the_title(); ?></h2>
+				        	</div>
 							
-							<?php while ( have_posts() ) : the_post(); ?>
-								<?php get_template_part( 'parts/content', 'search' ); ?>
-							<?php endwhile; ?>
+							<div class="col-md-12">
+								<form action="<?php echo esc_url( home_url( '/buscar' ) ); ?>" method="get">
+									<input type="text" name="search_text" value="<?= isset($text)?$text:''; ?>" placeholder="Buscar...">
+									<button type="submit" name="">Buscar</button>
+									<br><br>
+								</form>
+							</div>
+
+
+							<?php
+								if(isset($text)):
+									$args = array(
+											'post_type' 	=> 'page',
+											'post_per_page' => -1,
+											's' 			=> $text,
+											//'meta_key' 		=> $text
+										);
+									$query = new WP_Query($args);
+
+									if($query->posts):
+										foreach ($query->posts as $post):
+											get_template_part( 'parts/content', 'search' );
+										endforeach;
+										wp_reset_query();
+									endif;
+								endif;
+							?>
 
 				            <div class="clearfix"></div><!--.clearfix-->
 				        </div><!--.content-page-marco-->

@@ -14,6 +14,10 @@
             <?php 
             get_template_part( 'parts/header', 'content'); 
             ?>
+            <div class="social-icons-mobile text-center">
+                <?php mksystem_social_links(); ?>
+            </div>
         </header>
+
           
             

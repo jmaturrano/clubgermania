@@ -413,12 +413,30 @@ header{
 .caret{
 	display: none;
 }
+.mksystem-slider-eventos a:first-child{
+	margin-bottom: 100px;
+}
+.mksystem-slider-eventos a{
+	text-align: left;
+}
+.mksystem-slider-eventos a:nth-child(2){
+	position: absolute;
+	right: 0;
+	top: 30.5%;
+	z-index: 10;
+}
+.mksystem-slider-eventos .mksystem-img-thumbnail .img-thumbnail:hover{
+	opacity: 1;
+}
 
+.social-icons-mobile{
+	display: none;
+}
 
 /*
 media querys
 */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1200px){
 	.header_logo img {
 	  left:14%;
 	  max-width: 199px;
@@ -431,12 +449,15 @@ media querys
 	}
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 990px){
+	header{
+		position: relative;
+	}
 	#menu_row .navbar-collapse{
 		padding: 0;
 	}
 	#main{
-		padding-top: 103px;
+		padding-top: 0;
 	}
 	header #menu_row .navbar-collapse .navbar-nav > li{
 		margin: 0;
@@ -450,19 +471,25 @@ media querys
 	.class_servicios{
 		margin-top: 165px;
 	}
+	.logo-shop-border .border-right{
+		border-bottom: 141px solid transparent;
+	}
+	.logo-shop-border .border-left{
+		border-top-width: 141px;
+	}
 
 }
 
-@media screen and (max-width: 736px){
+@media screen and (max-width: 767px){
 	.main-header .block_absolute, 
 	.main-header .header-line-1, 
 	.main-header .header-line-2, 
 	.main-header .header-line-3{
 		display: none;
 	}
-	#main{
+/*	#main{
 		padding-top: 70px;
-	}
+	}*/
 	#menu_row a.navbar-brand{
 		padding-top: 0;
 		padding-bottom: 0;
@@ -519,12 +546,16 @@ media querys
 	.content-page-servicios{
 		padding: 5px 70px !important;
 	}
+	header #menu_row{
+		position: relative;
+	}
+	.social-icons-mobile{
+		display: block;
+		padding: 15px 0;
+	}
 }
 
-@media screen and (max-width: 414px){
-	#main{
-		padding-top: 69px;
-	}
+@media screen and (max-width: 575px){
 	.mksystem-icons{
 		border-radius: 0;
 		padding: 0;
@@ -539,6 +570,18 @@ media querys
 	.mksystem-icons ul{
 		margin-bottom: 1px;
 	}
+	.carousel-control .fa{
+		top: 28%;
+	}
+	.carousel-background{
+		border-width: 15px;
+	}
+}
+
+@media screen and (max-width: 414px){
+/*	#main{
+		padding-top: 69px;
+	}*/
 	.content-page{
 		padding: 0;
 	}
@@ -564,5 +607,11 @@ media querys
 	}
 	.content-page-servicios{
 		padding: 5px 15px !important;
+	}
+}
+
+@media screen and (max-width: 375px){
+	.carousel-control{
+		display: none;
 	}
 }
