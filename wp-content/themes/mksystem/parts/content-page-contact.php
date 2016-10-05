@@ -12,16 +12,6 @@
                         <div class="contact-sub-title h4"><?php echo esc_html(simple_business_wp_get_option('fp-contact-sub-title')); ?></div>
                     <?php } ?>
                     <?php 
-                    if(isset($_POST['submitted'])) { 
-                        if(isset($_POST['myname']) && isset($_POST['email'])) {
-                            if((trim($_POST['myname']) != "" ) && (trim($_POST['email']) != "" )) { ?>
-                                <p class="bg-success"><?php echo _e('Gracias por escribirnos!', 'simple-business-wp'); ?></p>
-                            <?php } else { ?>
-                                <p class="bg-danger"><?php echo _e('Por favor ingrese su nombre y su email.', 'simple-business-wp'); ?></p>
-                            <?php 
-                            }
-                        }
-                    }
                     if(isset($_POST['submitted'])) {
                         $simple_business_wp_contact_recipient_email = simple_business_wp_get_option('contact-mailto');
                         $simple_business_wp_contact_sender_email = simple_business_wp_get_option('contact-mailfrom');
@@ -49,6 +39,18 @@
                                 <h5>&nbsp;</h5>
                             </div>
                             <div class="clear"><br></div>
+                            <?php
+                                if(isset($_POST['submitted'])) { 
+                                    if(isset($_POST['myname']) && isset($_POST['email'])) {
+                                        if((trim($_POST['myname']) != "" ) && (trim($_POST['email']) != "" )) { ?>
+                                            <p class="bg-success"><?php echo _e('Gracias por escribirnos!', 'simple-business-wp'); ?></p>
+                                        <?php } else { ?>
+                                            <p class="bg-danger"><?php echo _e('Por favor ingrese su nombre y su email.', 'simple-business-wp'); ?></p>
+                                        <?php 
+                                        }
+                                    }
+                                }
+                            ?>
                              <form class="contact-form" name="contact-form" method="post">
                                 <div class="row">
                                     <div class="col-sm-4">

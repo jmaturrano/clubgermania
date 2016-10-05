@@ -3,8 +3,16 @@
     <head>
         <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
         <meta property="og:title" content="<?php bloginfo( 'name' ); ?>" />
-        <meta property="og:description" content="Club Germania" />
-        <meta property="og:image" content="<?php echo get_template_directory_child().'/inc/img/logo_blanco_293x252.png'; ?>" />
+        <?php $descripcion_larga = str_replace(' ', '+', get_theme_mod('blogdescription_large')); ?>
+        <meta property="og:description" content="<?= $descripcion_larga; ?>" />
+        <?php
+            if(get_theme_mod('blogimageshare', '') != ''){
+              $img_share = get_theme_mod('blogimageshare');
+            }else{
+              $img_share = get_template_directory_child().'/inc/img/logo_blanco_293x252.png';
+            }
+        ?>
+        <meta property="og:image" content="<?= $img_share; ?>" />
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

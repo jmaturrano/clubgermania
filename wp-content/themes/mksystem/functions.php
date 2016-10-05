@@ -272,15 +272,16 @@ function mksystem_customizer_register( $wp_customize ) {
     'type'    => 'text'
   ));
 
-  $wp_customize->add_setting('social_mail',array(
-    'default' => __('ejemplo@email.com','mksystem')
+  $wp_customize->add_setting('social_share',array(
+      'default' => true
   ));
-  $wp_customize->add_control('social_mail',array(
-    'label' => __('Email','mksystem'),
-    'section' => 'mksystem_social_links',
-    'setting' => 'social_mail',
-    'type'    => 'text'
+  $wp_customize->add_control( 'social_share', array(
+       'settings' => 'social_share',
+       'section'   => 'mksystem_social_links',
+       'label'     => __('Compartir en facebook (Comparte la página principal)','mksystem'),
+       'type'      => 'checkbox'
   ));
+
 
   $wp_customize->add_setting('check_bandera',array(
       'default' => true
@@ -307,6 +308,18 @@ function mksystem_customizer_register( $wp_customize ) {
        'label'     => __('Ver Formulario contacto','mksystem'),
        'type'      => 'checkbox'
   ));
+
+
+  $wp_customize->add_setting('social_mail',array(
+    'default' => __('ejemplo@email.com','mksystem')
+  ));
+  $wp_customize->add_control('social_mail',array(
+    'label' => __('Email','mksystem'),
+    'section' => 'mksystem_contacto',
+    'setting' => 'social_mail',
+    'type'    => 'text'
+  ));
+
   $wp_customize->add_setting('social_direccion',array(
     'default' => ''
   ));
@@ -325,6 +338,28 @@ function mksystem_customizer_register( $wp_customize ) {
     'setting' => 'social_mapzoom',
     'type'    => 'text'
   ));
+
+
+
+  $wp_customize->add_setting('blogdescription_large',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control('blogdescription_large',array(
+    'label' => __('Descripción larga','mksystem'),
+    'section' => 'title_tagline',
+    'setting' => 'blogdescription_large',
+    'type'    => 'textarea'
+  ));
+
+  $wp_customize->add_setting('blogimageshare',array(
+    'default' => get_template_directory_child().'/inc/logo_blanco_293x252.png'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'blogimageshare' , array(
+    'label' => __('Imagen para compartir' , 'mksystem'),
+    'section' => 'title_tagline',
+    'settings' => 'blogimageshare'
+  )));
+
 
 }
 add_action('customize_register','mksystem_customizer_register');
@@ -603,19 +638,23 @@ function mksystem_social_links(){
     echo '<a title="Vimeo" target="_blank" href="'.get_theme_mod('social_vimeo').'"><i class="icono fa fa-vimeo-square"></i></a>';
   }
 
-  if(get_theme_mod('social_mail') != ''){
+  if(get_theme_mod('check_contactform')){
     //echo '<a title="'.get_theme_mod('social_mail').'" href="mailto:'.get_theme_mod('social_mail').'"><i class="icono fa fa-envelope fa-social"></i></a>';
     echo '<a title="Contacto" href="'.esc_url(home_url( '/contacto' )).'"><i class="icono fa fa-envelope fa-social"></i></a>';
   }
 
-  if(get_theme_mod('check_contactform')){
-    $img_share = get_template_directory_child().'/inc/img/logo_blanco_293x252.png';
-    $descripcion_larga = str_replace(' ', '+', 'Club Germania');
+  if(get_theme_mod('social_share')){
+    if(get_theme_mod('blogimageshare', '') != ''){
+      $img_share = get_theme_mod('blogimageshare');
+    }else{
+      $img_share = get_template_directory_child().'/inc/img/logo_blanco_293x252.png';
+    }
+    $descripcion_larga = str_replace(' ', '+', get_theme_mod('blogdescription_large'));
     //$href = 'http://www.facebook.com/sharer.php?s=100&p[url]='.esc_url(home_url('/')).'&p[title]='.esc_attr(get_bloginfo('name','display')).'&p[summary]='.$descripcion_larga.'&p[images][0]='.$img_share;
 
     $href = 'http://www.hupso.com/share/add.php?service=facebook&title='.$descripcion_larga.'&url='.esc_url(home_url('/'));
 
-    echo '<a title="Compartir" target="_blank" href="'.$href.'"><i class="icono fa fa-share-alt"></i></a>';
+    echo '<a title="Compartir en facebook" target="_blank" href="'.$href.'"><i class="icono fa fa-share-alt"></i></a>';
     //echo '<a href="http://www.hupso.com/share/add.php?service=facebook&amp;title=JMaturrano&amp;url='.esc_url(home_url('/')).'" target="_blank"><img onmouseover="this.style.opacity=0.8;" onmouseout="this.style.opacity=1;" style="padding-right: 5px; padding-top: 5px; margin: 0px; background-color: transparent; display: inline-block; border: 0px none; outline: medium none; width: 32px; height: 32px; box-shadow: none; max-width: none; opacity: 1;" src="http://static.hupso.com/share/img/services/32/facebook.png" title="Facebook"></a>';
   }
 
