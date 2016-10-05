@@ -1,6 +1,11 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
     <head>
+        <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
+        <meta property="og:title" content="<?php bloginfo( 'name' ); ?>" />
+        <meta property="og:description" content="Club Germania" />
+        <meta property="og:image" content="<?php echo get_template_directory_child().'/inc/img/logo_blanco_293x252.png'; ?>" />
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

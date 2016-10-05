@@ -604,11 +604,21 @@ function mksystem_social_links(){
   }
 
   if(get_theme_mod('social_mail') != ''){
-    echo '<a title="'.get_theme_mod('social_mail').'" href="mailto:'.get_theme_mod('social_mail').'"><i class="icono fa fa-envelope fa-social"></i></a>';
+    //echo '<a title="'.get_theme_mod('social_mail').'" href="mailto:'.get_theme_mod('social_mail').'"><i class="icono fa fa-envelope fa-social"></i></a>';
+    echo '<a title="Contacto" href="'.esc_url(home_url( '/contacto' )).'"><i class="icono fa fa-envelope fa-social"></i></a>';
   }
 
   if(get_theme_mod('check_contactform')){
-    echo '<a title="Contacto" href="'.esc_url(home_url( '/contacto' )).'"><i class="icono fa fa-share-alt"></i></a>';
+    $img_share = get_template_directory_child().'/inc/img/logo_blanco_293x252.png';
+    $descripcion_larga = str_replace(' ', '+', 'Club Germania');
+    //$href = 'http://www.facebook.com/sharer.php?s=100&p[url]='.esc_url(home_url('/')).'&p[title]='.esc_attr(get_bloginfo('name','display')).'&p[summary]='.$descripcion_larga.'&p[images][0]='.$img_share;
+
+    $href = 'http://www.hupso.com/share/add.php?service=facebook&title='.$descripcion_larga.'&url='.esc_url(home_url('/'));
+
+    echo '<a title="Compartir" target="_blank" href="'.$href.'"><i class="icono fa fa-share-alt"></i></a>';
+    //echo '<a href="http://www.hupso.com/share/add.php?service=facebook&amp;title=JMaturrano&amp;url='.esc_url(home_url('/')).'" target="_blank"><img onmouseover="this.style.opacity=0.8;" onmouseout="this.style.opacity=1;" style="padding-right: 5px; padding-top: 5px; margin: 0px; background-color: transparent; display: inline-block; border: 0px none; outline: medium none; width: 32px; height: 32px; box-shadow: none; max-width: none; opacity: 1;" src="http://static.hupso.com/share/img/services/32/facebook.png" title="Facebook"></a>';
   }
+
+
 
 }

@@ -4,7 +4,7 @@
         <div class="content-page-marco">
 
                 <div class="col-md-12">
-                    <div class="contact-title h1">Contáctenos</div>
+
                     <?php if (simple_business_wp_get_option('fp-contact-title') != '') { ?>
                         <div class="contact-title h1"><?php echo esc_html(simple_business_wp_get_option('fp-contact-title')); ?></div>
                     <?php } ?>
@@ -40,6 +40,15 @@
                     ?>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
+
+                            <!--<div class="contact-title h1">Contáctenos</div>-->
+                            <div class="block-title-page text-center">
+                                <div class="border-title-page"></div>
+                                <h3><?php get_template_part( 'parts/title', 'page'); ?></h3>
+                                <h5 style="text-transform: none;"><?= get_theme_mod('social_mail'); ?></h5>
+                                <h5>&nbsp;</h5>
+                            </div>
+                            <div class="clear"><br></div>
                              <form class="contact-form" name="contact-form" method="post">
                                 <div class="row">
                                     <div class="col-sm-4">

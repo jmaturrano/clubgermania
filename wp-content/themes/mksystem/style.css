@@ -24,7 +24,14 @@ HEADER
 body{
 	font: 400 14px/1.8em "Century Gothic";
 }
-.navbar-default .navbar-brand, .navbar-default a, .navbar-brand a, .navbar-default:hover .navbar-brand:hover, .navbar-default a:hover, .navbar-brand a:hover{
+.navbar-default .navbar-brand, 
+.navbar-default a, 
+.navbar-brand a, 
+.navbar-default:hover .navbar-brand:hover, 
+.navbar-default a:hover, 
+.navbar-brand a:hover, 
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6{
 	font-family: "Century Gothic" !important;
 }
 .header_logo img {
