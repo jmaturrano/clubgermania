@@ -22,7 +22,8 @@
                         $meta_nombre    = isset($post_meta['nombre'][0])?$post_meta['nombre'][0]:'Complete el campo <strong>nombre</strong>';
                         ?>
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="<?= get_permalink($post->ID); ?>" class="mksystem-img-thumbnail text-center">
+                            <!--<a href="<?= get_permalink($post->ID); ?>" class="mksystem-img-thumbnail text-center">-->
+                            <a href="javascript:;" class="mksystem-img-thumbnail text-center">
                                 <?php
                                     the_post_thumbnail('thumbnail', array('class'=>'img-thumbnail'));
                                 ?>

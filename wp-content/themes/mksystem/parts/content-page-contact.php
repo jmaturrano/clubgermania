@@ -13,8 +13,8 @@
                     <?php } ?>
                     <?php 
                     if(isset($_POST['submitted'])) {
-                        $simple_business_wp_contact_recipient_email = simple_business_wp_get_option('contact-mailto');
-                        $simple_business_wp_contact_sender_email = simple_business_wp_get_option('contact-mailfrom');
+                        $simple_business_wp_contact_recipient_email = get_theme_mod('social_mail');
+                        $simple_business_wp_contact_sender_email = trim($_POST['email']);
                         if($simple_business_wp_contact_recipient_email != '' && $simple_business_wp_contact_sender_email != '') {
                             extract($_POST);
                             $blog_name = get_bloginfo('name');
@@ -22,23 +22,36 @@
                                         Email: $email
                                         Website: $website
                                         Comentarios: $comments
+                            \r\n Este mensaje fue enviado automaticamente desde el formulario de contacto del sitio Club Germania.
                             ";
                             $headers = 'From: '.$blog_name.' <'.$simple_business_wp_contact_sender_email.'>' . "\r\n";
-                            wp_mail($simple_business_wp_contact_recipient_email, 'Contact Form', $message, $headers);
+
+                            wp_mail($simple_business_wp_contact_recipient_email, 'Club Germania Contacto', $message, $headers);
                         }
                     }
                     ?>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-
-                            <!--<div class="contact-title h1">Contáctenos</div>-->
+                            <!--
                             <div class="block-title-page text-center">
                                 <div class="border-title-page"></div>
                                 <h3><?php get_template_part( 'parts/title', 'page'); ?></h3>
                                 <h5 style="text-transform: none;"><?= get_theme_mod('social_mail'); ?></h5>
                                 <h5>&nbsp;</h5>
                             </div>
+                            -->
+
+                            <div class="block-title-complex">
+                                <div class="mksystem-triangulo"></div>
+                                <div class="block-title-page text-center">
+                                    <h3><?php get_template_part( 'parts/title', 'page'); ?></h3>
+                                </div>
+                            </div>
+
                             <div class="clear"><br></div>
+                            <?php if(get_theme_mod('social_mail', '') != ''){ ?>
+                                <h5 style="text-transform: none; display: none;">Correo: <?= get_theme_mod('social_mail'); ?></h5>
+                            <?php } ?>
                             <?php
                                 if(isset($_POST['submitted'])) { 
                                     if(isset($_POST['myname']) && isset($_POST['email'])) {
